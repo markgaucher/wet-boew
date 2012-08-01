@@ -76,6 +76,7 @@
 			"%colon" : ":",
 			"%start" : "Start",
 			"%stop" : "Stop",
+			"%back" : "Back",
 			"%minute-ago" : "a minute ago",
 			"%couple-of-minutes" : "couple of minutes ago",
 			"%minutes-ago" : {
@@ -102,7 +103,7 @@
 			"%play" : "Play",
 			"%pause" : "Pause",
 			"%close" : "Close",
-			"%rewind" : "Rewind ",
+			"%rewind" : "Rewind",
 			"%next" : "Next",
 			"%previous" : "Previous",
 			"%fast-forward" : "Fast forward ",
@@ -114,6 +115,7 @@
 				"disable" : "Hide Closed captioning",
 				"enable" : "Show Closed captioning"
 			},
+			"%captionserror" : "Error loading closed captions",
 			"%audio-description" : {
 				"enable" : "Enable Audio Description",
 				"disable" : "Disable Audio Description"
@@ -164,7 +166,12 @@
 			"%lb-prev" : "Previous item",
 			"%lb-xhr-error" : "This content failed to load.",
 			"%lb-img-error" : "This image failed to load.",
-			"%lb-slideshow" : "slideshow"
+			"%lb-slideshow" : "slideshow",
+			/* jQuery Mobile */
+			"%jqm-expand" : " click to expand contents",
+			"%jqm-collapse" : " click to collapse contents",
+			"%jqm-clear-search" : "clear search",
+			"%jqm-filter" : "Filter items..."
 		}
 	};
 	$(document).trigger("languageloaded");

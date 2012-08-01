@@ -72,6 +72,7 @@
 			"%colon" : "&#160;:",
 			"%start" : "Lancer",
 			"%stop" : "Arrêter",
+			"%back" : "Précédent",
 			"%minute-ago": "il ya une minute",
 			"%couple-of-minutes": "il ya quelques minutes",
 			"%minutes-ago": {
@@ -98,7 +99,7 @@
 			"%play": "Jouer",
 			"%pause": "Pause",
 			"%close": "Fermer",
-			"%rewind": "Reculer ",
+			"%rewind": "Reculer",
 			"%next" : "Prochaine",
 			"%previous" : "Précedent",
 			"%fast-forward": "Avancer ",
@@ -110,6 +111,7 @@
 				"disable": "Masquer le sous-titrage",
 				"enable": "Afficher le sous-titrage"
 			},
+			"%captionserror" : "Erreur dans le chargement des sous-titres",
 			"%audio-description": {
 				"enable": "Activer l'audiodescription",
 				"disable": "Désactiver l'audiodescription"
@@ -160,7 +162,12 @@
 			"%lb-prev" : "Article précédent",
 			"%lb-xhr-error" : "Le chargement de ce contenu a échoué.",
 			"%lb-img-error" : "Le chargement de cette image a échoué.",
-			"%lb-slideshow" : "la diaporama"
+			"%lb-slideshow" : "la diaporama",
+			/* jQuery Mobile */
+			"%jqm-expand" : " cliquer pour afficher le contenu",
+			"%jqm-collapse" : " cliquer pour masquer le contenu",
+			"%jqm-clear-search" : "effacer le texte",
+			"%jqm-filter" : "Filtrer des articles..."
 		}
 	};
 	$(document).trigger("languageloaded");

@@ -99,7 +99,7 @@
 					$.extend($.mobile, {
 						ajaxEnabled: false,
 						pushStateEnabled: false,
-						autoInitializePage: (init_on_mobileinit ? true : false)
+						autoInitializePage: (init_on_mobileinit ? true : false),
 					});
 				});
 
@@ -180,6 +180,15 @@
 
 						//Load the mobile view
 						if (pe.mobile === true) {
+							// Apply internationalization to jQuery Mobile
+							$.mobile.collapsible.prototype.options.expandCueText = pe.dic.get('%jqm-expand');
+							$.mobile.collapsible.prototype.options.collapseCueText = pe.dic.get('%jqm-collapse');
+							$.mobile.dialog.prototype.options.closeBtnText = pe.dic.get('%close');
+							$.mobile.page.prototype.options.backBtnText = pe.dic.get('%back');
+							$.mobile.textinput.prototype.options.clearSearchButtonText = pe.dic.get('%jqm-clear-search');
+							$.mobile.selectmenu.prototype.options.closeText = pe.dic.get('%close');
+							$.mobile.listview.prototype.options.filterPlaceholder = pe.dic.get('%jqm-filter');
+
 							$(document).on("mobileviewloaded", function () {
 								if ($.mobile !== undefined) {
 									$.mobile.initializePage();
@@ -828,6 +837,7 @@
 		 */
 		polyfills: function () {
 			var lib = pe.add.liblocation,
+				elms,
 				// modernizer test for detailsummary support
 				details = (function (doc) {
 					var el = doc.createElement('details'),
@@ -859,15 +869,30 @@
 			if (!window.localStorage) {
 				pe.add._load(lib + 'polyfills/localstorage' + pe.suffix + '.js');
 			}
-			// process
+			// progress
 			if (typeof document.createElement('progress').position === "undefined") {
-				pe.add._load(lib + 'polyfills/progress' + pe.suffix + '.js');
-				$("progress").addClass("polyfill");
+				elms = $('progress');
+				if (elms.length > 0) {
+					pe.add._load(lib + 'polyfills/progress' + pe.suffix + '.js');
+					elms.addClass('polyfill');
+				}
 			}
 			// details + summary
 			if (!details) {
-				pe.add._load(lib + 'polyfills/detailssummary' + pe.suffix + '.js');
-				$("details").addClass("polyfill");
+				elms = $('details');
+				if (elms.length > 0) {
+					pe.add._load(lib + 'polyfills/detailssummary' + pe.suffix + '.js');
+					elms.addClass('polyfill');
+				}
+			}
+
+			// datalist
+			if (!(!!(document.createElement('datalist') && window.HTMLDataListElement))) {
+				elms = $('input[list]');
+				if (elms.length > 0) {
+					pe.add._load(lib + 'polyfills/datalist' + pe.suffix + '.js');
+					elms.addClass('polyfill');
+				}
 			}
 		},
 		/**
