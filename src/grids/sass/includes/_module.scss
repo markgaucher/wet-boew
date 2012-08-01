@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 @charset "utf-8";
 /*
  * Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
  * www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions
  */
->>>>>>> upstream/master
 @mixin modules {
 
 	.module-related, .module-billboard, .module-event, .module-menu-section, .module-table-contents {
@@ -23,7 +20,7 @@
 	
 	.module-billboard li, .module-related > ul, .module-menu-section > ul, .module-event > ul, .module-event > table {
 		margin-top: 1px !important;
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 	}
 	
 	.module-event > ul, .module-event ul {
@@ -52,7 +49,8 @@
 	}
 	
 	.module-billboard ul {
-		li {		
+		li {
+
 			a, a:link, a:visited {
 			
 				border-style: solid;
@@ -186,14 +184,7 @@
 	}
 	
 	.module-poster img { margin-bottom: 0; }
-<<<<<<< HEAD
-	
-	/*
-	these modules are not included in the RCMP release
-	
-=======
 
->>>>>>> upstream/master
 	.module-news {
 	
 		#{headers(2,6)} {
@@ -243,11 +234,7 @@
 			
 			li {
 				margin-bottom: $margin-medium;
-<<<<<<< HEAD
-				padding: $margin-medium $margin-medium $margin-medium ($margin-xlarge - $margin-medium);
-=======
 				padding: $margin-medium $margin-medium $margin-medium ($margin-xlarge - $margin-medium) !important;
->>>>>>> upstream/master
 				
 				@include fugue-icon("user-silhouette.png", $line-height: 40px, $padding: 40px);
 				@include border-radius;
@@ -255,10 +242,6 @@
 			}
 		}
 	}
-<<<<<<< HEAD
-	*/
-=======
->>>>>>> upstream/master
 	
 	div {
 
@@ -282,7 +265,7 @@
 			
 			#{headers(2,6)} {
 				border-bottom: 1px solid #ddd;
-				font-family: $sans-serif;
+				font-family: $sans-serif !important;
 				font-size: 130%;
 				font-weight: $font-weight-normal;
 				width: auto;

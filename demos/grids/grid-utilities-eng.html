@@ -34,6 +34,25 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <!--<![endif]-->
 
 <!-- CustomScriptsCSSStart -->
+<style type="text/css">
+.view-example {
+	margin-bottom: 0 !important;
+}
+.view-example summary {
+	background-color: #176ca7;
+	color: #fff;
+	margin-bottom: 10px;
+	padding: 3px 10px;
+}
+.view-code {
+	margin-bottom: 0 !important;
+}
+.view-code summary {
+	background-color: #dda;
+	margin-bottom: 10px;
+	padding: 3px 10px;
+}
+</style>
 <!-- CustomScriptsCSSEnd -->
 </head>
 
@@ -144,10 +163,6 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 		<li><a href="#opacity">Opacity</a></li>
 	</ul>
 	</li>
-</ul>
-</div>
-<div class="span-4 row-end">
-<ul>
 	<li>Specialty styles
 	<ul>
 		<li><a href="#invisible"><code>wb-invisible</code> class</a></li>
@@ -1171,8 +1186,10 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 	<p><strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong></p>
 	<ul>
 	<li><code>background-light</code></li>
+	<li><code>background-medium</code></li>
 	<li><code>background-dark</code></li>
 	<li><code>background-accent</code></li>
+	<li><code>background-highlight</code></li>
 	</ul>
 </div>
 <p>Use background colours to highlight content and &#47; or create information blocks that focus the user's attention. You can apply these background colours to a grid cell or to an HTML element for example, a heading. Do not overuse background colours, or they become less effective.</p>
@@ -1214,6 +1231,13 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 		<td><p class="background-accent margin-top-none margin-bottom-none">Lorem ipsum</p></td>
 		<td><span class="background-accent">Lorem ipsum</span></td>
 		<td><div class="background-accent">Lorem ipsum</div></td>
+	</tr>
+	<tr>
+		<td><code>background-highlight</code></td>
+		<td><h3 class="background-highlight">Lorem ipsum</h3></td>
+		<td><p class="background-highlight margin-top-none margin-bottom-none">Lorem ipsum</p></td>
+		<td><span class="background-highlight">Lorem ipsum</span></td>
+		<td><div class="background-highlight">Lorem ipsum</div></td>
 	</tr>
 </table>
 <div class="clear"></div>
@@ -2019,9 +2043,8 @@ Forgot paragraph tag (not ideal)
 <p>Included with grids is a comprehensive portfolio of <abbr title="Cascading Style Sheet">CSS</abbr> styles. Please adhere to these styles and only change the colors and imagery to match your branding requirements. <strong class="color-attention">If you use your own styles or adjust the attributes of the <abbr title="Cascading Style Sheet">CSS</abbr>, you may find it difficult to participate in future rollouts of new/improved layouts and designs.</strong></p>
 <p>Here is a snapshot of the classes you can use with grids. Every design feature on this page uses one or more of the following <abbr title="Cascading Style Sheet">CSS</abbr> classes:</p>
 <div class="grid-12 span-12 equalize">
-	<div class="border-right">
-	<div class="span-4 row-start">
-		<h3 class="background-light">Grid <abbr title="Cascading Style Sheet">CSS</abbr> and Module <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+	<div class="span-4 module-table-contents row-start">
+		<h3>Grid <abbr title="Cascading Style Sheet">CSS</abbr> and Module <abbr title="Cascading Style Sheet">CSS</abbr></h3>
 		<ul>
 		<li>span-1</li>
 		<li>span-2</li>
@@ -2052,8 +2075,6 @@ Forgot paragraph tag (not ideal)
 		<li>module-comment</li>
 		<li>module-contact</li>
 		<li>module-event</li>
-		<li>module-form-fluid</li>
-		<li>module-form-fluid-none</li>
 		<li>module-highlight</li>
 		<li>module-highlight-details</li>
 		<li>module-info</li>
@@ -2071,7 +2092,6 @@ Forgot paragraph tag (not ideal)
 		<li>module-table-contents</li>
 		<li>module-tool</li>
 		<li>module</li>
-		<li>module-welcomepage</li>
 		<li>print-span-1</li>
 		<li>print-span-2</li>
 		<li>print-span-3</li>
@@ -2082,8 +2102,7 @@ Forgot paragraph tag (not ideal)
 		<li>print-span-8</li>
 		</ul>
 	</div>
-	</div>
-	<div class="span-4">
+	<div class="span-4 module-table-contents">
 	<h3 class="background-accent">Positioning / placement <abbr title="Cascading Style Sheet">CSS</abbr></h3>
 	<ul>
 		<li>align-left</li>
@@ -2151,8 +2170,7 @@ Forgot paragraph tag (not ideal)
 		<li>width-100</li>
 	</ul>
 	</div>
-	<div class="border-left">
-	<div class="span-4 row-end">
+	<div class="span-4 row-end module-table-contents">
 		<h3 class="background-dark">Styling <abbr title="Cascading Style Sheet">CSS</abbr></h3>
 		<ul>
 		<li>background-dark</li>
@@ -2215,16 +2233,18 @@ Forgot paragraph tag (not ideal)
 	</div>
 </div>
 <div class="clear"></div>
-<h3 id="fs">Font size</h3>
-<table>
+<h3 id="fs">Font Size</h3>
+<table class="table-simplify span-8">
 	<caption>
 	The different font size styling options
 	</caption>
+	<thead>
 	<tr>
 	<th scope="col">Class</th>
 	<th scope="col">Details</th>
 	<th scope="col">Example</th>
 	</tr>
+</thead>
 	<tr>
 	<td><code>font-xxsmall</code></td>
 	<td>Extra-extra small font (50%)</td>
@@ -2261,16 +2281,18 @@ Forgot paragraph tag (not ideal)
 	<td class="font-xxlarge">Resulting text size</td>
 	</tr>
 </table>
-<h3 id="fc">Font colour</h3>
-<table>
+<h3 id="fc">Font Colour</h3>
+<table class="table-simplify span-8">
 	<caption>
 	The different font colour styling options
 	</caption>
-	<tr>
-	<th scope="col">Class</th>
-	<th scope="col">Details</th>
-	<th scope="col">Example</th>
-	</tr>
+	<thead>
+		<tr>
+		<th scope="col">Class</th>
+		<th scope="col">Details</th>
+		<th scope="col">Example</th>
+		</tr>
+	</thead>
 	<tr>
 	<td><code>color-accent</code></td>
 	<td>Match the font colour to colour theme.</td>
@@ -2282,16 +2304,18 @@ Forgot paragraph tag (not ideal)
 	<td class="color-attention">Resulting text colour</td>
 	</tr>
 </table>
-<h3 id="ls">List styles</h3>
-<table>
+<h3 id="ls">Lists</h3>
+<table class="table-simplify span-8">
 	<caption>
 	The different list styling options
 	</caption>
+	<thead>
+		<tr>
+			<th scope="col" class="width-20">Class</th>
+			<th scope="col">Example</th>
+		</tr>
+	</thead>
 	<tbody>
-	<tr>
-		<th scope="col">Class</th>
-		<th scope="col">Example</th>
-	</tr>
 	<tr>
 		<td>default <code> &lt;ol&gt; </code></td>
 		<td><ol>
@@ -2694,280 +2718,533 @@ Forgot paragraph tag (not ideal)
 	</tr>
 </table>
 <h3 id="width">Width</h3>
-<table>
+<table class="table-simplify">
 	<caption>
 	The different table width styling options (usually only for <code>&lt;table&gt;</code>, <code>&lt;td&gt;</code> and <code>&lt;th&gt;</code>)
 	</caption>
+	<thead>
+		<tr>
+		<th scope="col" class="width-10">Class</th>
+		<th scope="col">Details and examples </th>
+		</tr>
+	</thead>
 	<tr>
-	<th scope="col">Class</th>
-	<th scope="col">Details and examples </th>
-	</tr>
-	<tr>
-	<td><code>width100</code></td>
+	<td><code>width-100</code></td>
 	<td><p>This table uses the <code>width100</code> style to stretch it across 100% of the available space. This styling suits the content, as there is minimal word wrapping and white space.</p>
-		<table class="width-100">
-		<caption>
-		A table within a table — also with the <code>width-100</code> style
-		</caption>
-		<tr>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-		</tr>
-		<tr>
-			<td>Data and and minimal white space. The width of both data cells self-adjust to fit the content, and both have minimal word wrapping.</td>
-			<td>Data and and minimal white space.</td>
-		</tr>
-		</table></td>
+		<div class="width-100"><p class="background-accent">This block uses the <code>width-100</code> class.</p></div>
+	</td>
 	</tr>
 	<tr>
 	<td><code>width-90</code><br/></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-90"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-80</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-80"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-70</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-70"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-60</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-60"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-50</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-50"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-40</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-40"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-30</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-30"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-20</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-20"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 	<tr>
 	<td><code>width-10</code></td>
-	<td>The same concept as <code>width-100</code> applies.</td>
+	<td><div class="width-10"><p class="background-accent">The same concept as <code>width-100</code> applies.</p></div></td>
 	</tr>
 </table>
-<h3 id="ts">Table styles</h3>
-<table>
-	<caption>
-	The various table styling options
-	</caption>
-	<tr>
-	<th scope="col" class="width-20">Class</th>
-	<th scope="col">Details</th>
-	<th class="width-50" scope="col">Example</th>
-	</tr>
-	<tr>
-	<td>(default)</td>
-	<td>Default table style</td>
-	<td><table>
-		<caption>
-		Without added styles
-		</caption>
-		<tr>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		</table></td>
-	</tr>
-	<tr>
-	<td><code>wet-boew-zebra</code></td>
-	<td>Default table style with zebra effect</td>
-	<td><table class="wet-boew-zebra">
-		<caption>
-		Without added styles
-		</caption>
-		<tr>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		</table></td>
-	</tr>
-	<tr>
-	<td><code>table-accent</code></td>
-	<td>Matches table colour to users selected colour theme.</td>
-	<td><table class="table-accent">
-		<caption>
-		With just <code>table-accent</code>
-		</caption>
-		<tr>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		</table></td>
-	</tr>
-	<tr>
-	<td><code>table-accent wet-boew-zebra</code></td>
-	<td>Matches table colour to users selected colour theme.</td>
-	<td><table class="table-accent wet-boew-zebra">
-		<caption>
-		With <code>table-accent</code> and <code>wet-boew-zebra</code>
-		</caption>
-		<tr>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-			<th scope="col">Header</th>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		<tr>
-			<td>Data</td>
-			<td>Data</td>
-			<td>Data</td>
-		</tr>
-		</table></td>
-	</tr>
+<h3 id="ts">Tables</h3>
+<table class="span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>
+			<ul>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		 </td>
+         <td>
+			<table>
+				<tr>
+					<th>Header</th>
+					<th>Header</th>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+			</table>
+		 </td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>Default table style</caption>
 </table>
-<h3 id="bc">Background colours</h3>
-<p>Add a background colour to various elements.</p>
-<table>
-	<tr>
-	<th scope="col">Class</th>
-	<th scope="col">Details</th>
-	<th scope="col">Example 1 </th>
-	<th scope="col">Example 2</th>
-	<th scope="col">Example 3</th>
-	</tr>
-	<tr>
-	<td><code>background-light</code></td>
-	<td>light branding colour</td>
-	<td><p class="background-light">On a paragraph</p></td>
-	<td><h2 class="background-light">On a heading</h2></td>
-	<td><div class="background-light">On a <code>div</code></div></td>
-	</tr>
-	<tr>
-	<td><code>background-dark</code></td>
-	<td>dark branding colour</td>
-	<td><p class="background-dark">On a paragraph</p></td>
-	<td><h2 class="background-dark">On a heading</h2></td>
-	<td><div class="background-dark">On a <code>div</code></div></td>
-	</tr>
-	<tr>
-	<td><code>background-accent</code></td>
-	<td>accent branding colour</td>
-	<td><p class="background-accent">On a paragraph</p></td>
-	<td><h2 class="background-accent">On a heading</h2></td>
-	<td><div class="background-accent">On a <code>div</code></div></td>
-	</tr>
-	<tr>
-	<td><code>background-white</code></td>
-	<td>white - limited use, mainly layered inside something with a background colour and part of it needs to revert back to white</td>
-	<td><p class="background-accent">On a paragraph, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</p></td>
-	<td><h2 class="background-accent">On a heading, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</h2></td>
-	<td><div class="background-accent">On a <code>div</code>, this part is the accent colour and <span class="background-white">this part is white</span> and now back to the accent color</div></td>
-	</tr>
-	<tr>
-	<td><code>background-highlight</code></td>
-	<td>yellow - limited use, mainly to highlight text</td>
-	<td><p class="background-highlight">On a paragraph</p></td>
-	<td><h2 class="background-highlight">On a heading</h2></td>
-	<td><div class="background-highlight">On a <code>div</code></div></td>
-	</tr>
+
+<table class="table-accent span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>
+			<ul>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		 </td>
+         <td>
+			<table>
+				<tr>
+					<th>Header</th>
+					<th>Header</th>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+			</table>
+		 </td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>Default table accent zebra style</caption>
 </table>
-<h3 id="teasers">Teasers</h3>
+
+<table class="wet-boew-zebra span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>
+			<ul>
+				<li>List Item</li>
+				<li>List Item</li>
+				<li>List Item</li>
+			</ul>
+		 </td>
+         <td>
+			<table>
+				<tr>
+					<th>Header</th>
+					<th>Header</th>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+			</table>
+		 </td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>Default table accent style</caption>
+</table>
+
+<table class="table-simplify span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>Simple table</caption>
+</table>
+
+<table class="table-simplify wet-boew-zebra span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	<caption>Striped table <span class="color-attention">I need to add the zebra-striped jQuery plugin functionality.</span></caption>
+</table>
+
+<table class="table-simplify table-bordered span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+    <caption>Bordered table</caption>
+</table>
+
+<table class="table-simplify table-bordered table-accent span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+    <caption>Bordered table (with colour)</caption>
+</table>
+
+<table class="table-simplify table-condensed span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>Condensed table</caption>
+</table>
+
+<table class="table-simplify table-striped table-bordered table-condensed span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>All styles combined</caption>
+</table>  
+
+<table class="table-simplify table-striped table-bordered table-condensed table-medium span-8">
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+         <th scope="col">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
+	</tbody>
+   <caption>All styles combined (with colour)</caption>
+</table> 
+
+<table class="table-simplify align-right span-8">
+   <caption>Expenses</caption>
+   <colgroup>
+      <col class="width-30">
+      <col>
+      <col>
+      <col>
+      <col>
+   </colgroup>
+   <thead>
+   <tr>
+      <td></td>
+      <th class="align-right">Dollars (2009)</th>
+      <th class="align-right">Percentage (2009)</th>
+      <th class="align-right">Dollars (2008)</th>
+      <th class="align-right">Percentage (2008)</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$1,500,000</td>
+      <td>15.00%</td>
+      <td>$1,500,000</td>
+      <td>15.00%</td>
+   </tr>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$750,000</td>
+      <td>7.50%</td>
+      <td>$650,000</td>
+      <td>6.50%</td>
+   </tr>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$2,000,000</td>
+      <td>20.00%</td>
+      <td>$1,450,000</td>
+      <td>14.50%</td>
+   </tr>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$5,000,000</td>
+      <td>50.00%</td>
+      <td>$5,500,000</td>
+      <td>55.00%</td>
+   </tr>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$500,000</td>
+      <td>5.00%</td>
+      <td>$550,000</td>
+      <td>5.50%</td>
+   </tr>
+   <tr>
+      <td>Lorem Ipsum</td>
+      <td>$250,000</td>
+      <td>2.50%</td>
+      <td>$350,000</td>
+      <td>3.50%</td>
+   </tr>
+	</tbody>
+   <tfoot>
+   <tr>
+      <td>Total</td>
+      <td>$9,684,581</td>
+      <td>100.00%</td>
+      <td>$11,733,342</td>
+      <td>100.00%</td>
+   </tr>
+   </tfoot>
+</table>
+
+<table class="table-simplify table-numeric span-8">
+   <caption>Financial Table</caption>
+   <thead>
+      <tr>
+         <th scope="col">Header</th>
+         <th scope="col" class="align-right">Header</th>
+         <th scope="col" class="align-right">Header</th>
+      </tr>
+	</thead>
+   <tbody>
+      <tr class="table-header">
+         <th colspan="3">Subheading:</th>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>$1,000,000</td>
+         <td>$1,000,000</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>$1,000,000</td>
+         <td>$1,000,000</td>
+      </tr>
+      <tr>
+         <td>Data</td>
+         <td>$1,000,000</td>
+         <td>$1,000,000</td>
+      </tr>
+	</tbody>
+   <tfoot>
+      <tr>
+         <th>Total</th>
+         <td>$3,000,000</td>
+         <td>$3,000,000</td>
+      </tr>
+   </tfoot>
+</table>
+
+
+<h3 id="teasers">Badges</h3>
 <p>Draw attention to a some keyword trigger text. This acts as a teaser to the information that immediately follows on the <strong>same line</strong>.</p>
-<table>
+<table class="table-simplify span-8">
+	<thead>
 	<tr>
 	<th scope="col">Class</th>
 	<th scope="col">Details</th>
-	<th scope="col" class="width-30">Example 1: With a heading</th>
-	<th scope="col" class="width-30">Example 2: With a list</th>
-	<th scope="col" class="width-30">Example 3: With a link</th>
+	<th scope="col" class="width-20">Example 1: With a heading</th>
+	<th scope="col" class="width-20">Example 2: With a list</th>
+	<th scope="col" class="width-20">Example 3: With a link</th>
+	</tr>
+	</thead>
+	<tr>
+	<td><code>badge-intro</code></td>
+	<td>adds decoration to the trigger keywords</td>
+	<td><h2> <span class="badge-intro">Step 1</span> Do x</h2></td>
+	<td><ul>
+		<li><span class="badge-intro">Option 1</span> X option</li>
+		</ul></td>
+	<td><p><a href="#"><span class="badge-intro">Did you know?</span> Text</a></p></td>
 	</tr>
 	<tr>
-	<td><code>teaser-1</code></td>
+	<td><code>badge-new</code></td>
 	<td>adds decoration to the trigger keywords</td>
-	<td><h2> <span class="teaser-1">Step 1</span> Do x</h2></td>
+	<td><h2>Do x <span class="badge-new">New</span></h2></td>
 	<td><ul>
-		<li><span class="teaser-1">Option 1</span> X option</li>
+		<li>X option <span class="badge-new">New</span></li>
 		</ul></td>
-	<td><p><a href="#"><span class="teaser-1">Did you know?</span> Text</a></p></td>
+	<td><p><a href="#">Text</a> <span class="badge-new">New</span></p></td>
 	</tr>
 	<tr>
-	<td><code>teaser-2</code></td>
+	<td><code>badge-update</code></td>
 	<td>adds decoration to the trigger keywords</td>
-	<td><h2> <span class="teaser-2">Step 1</span> Do x</h2></td>
+	<td><h2>Do x <span class="badge-update">Updated</span></h2></td>
 	<td><ul>
-		<li><span class="teaser-2">Option 1</span> X option</li>
+		<li>X option <span class="badge-update">Updated</span></li>
 		</ul></td>
-	<td><p><a href="#"><span class="teaser-2">Did you know?</span> Text</a></p></td>
+	<td><p><a href="#">Text</a> <span class="badge-update">Updated</span></p></td>
 	</tr>
 </table>
 <h3 id="opacity">Opacity</h3>
 <p>Adjust the opacity of any element.</p>
-<table>
+<table class="table-simplify span-8">
+	<thead>
 	<tr>
-	<th scope="col">Class</th>
+	<th scope="col" class="width-20">Class</th>
 	<th scope="col">Details</th>
-	<th scope="col">Example 1</th>
+	<th scope="col" class="width-10">Example 1</th>
 	<th scope="col">Example 2</th>
 	<th scope="col">Example 3</th>
 	</tr>
+</thead>
 	<tr>
 	<td><code>opacity-100</code></td>
 	<td>100% opacity</td>
@@ -3039,22 +3316,10 @@ Forgot paragraph tag (not ideal)
 	<td><p class="opacity-10">Text</p></td>
 	</tr>
 </table>
+
 <h3 id="invisible"><code>wb-invisible</code> class</h3>
 <p>The <code>wb-invisible</code> class clips content into a one pixel square. It allows you to create links that are descriptive (and compliant), but not visually clutter the page. It is common to use this technique to target assistive technology users. For example, JAWS users hear the information, but the visual user does not hear or see it. The <abbr title="Cascading Style Sheet">CSS</abbr> attribute <code>display:none;</code> does not achieve the same effect, as JAWS ignores this style entirely.</p>
-<h3 id="new"><code>new</code> class</h3>
-<p>Use this class to draw attention to new content. Mainly use it to showcase new hyperlinks that you add to a list of pre-existing links. For example:</p>
-<ul>
-	<li><a href="#new">Fake link</a></li>
-	<li><a href="#new">Fake link</a> <span class="new">New</span></li>
-	<li><a href="#new">Fake link</a></li>
-</ul>
-<h3 id="update"><code>update</code> class</h3>
-<p>Use this class to draw attention to updated content. Mainly use it to showcase	new hyperlinks that you add to a list of pre-existing links. For example:</p>
-<ul>
-	<li><a href="#new">Fake link</a></li>
-	<li><a href="#new">Fake link</a> <span class="update">Updated - February 6, 2011</span></li>
-	<li><a href="#new">Fake link</a></li>
-</ul>
+
 <h3 id="wrap"><code>wrap-none</code> class</h3>
 <p>This class prevents content from splitting over multiple lines. Use it mainly when writing something such as a date, phone number or mathematical equation, as this ensures they are easy to read. For example: <code class="wrap-none">&lt;span class="wrap-none"&gt;January 1, 2010&lt;/span&gt;</code></p>
 <h3 id="calendar">Calendar <abbr title="Cascading Style Sheet">CSS</abbr> </h3>
@@ -3172,650 +3437,522 @@ Forgot paragraph tag (not ideal)
 <p>(Uses <code>thermometer-120</code>)</p>
 </div>
 <div class="clear"></div>
+
+<h3 id="versatile"><code>module</code> style</h3>
+<div class="span-4">
+	<p>Use the <code>module</code> class for <strong>any type of content</strong>. This module is typically located on the right but can be used anywhere.	It only works with a <code>span-2</code>.</p>
+</div>
+<div class="span-4">
+
+   <div class="span-2 row-start">
+      <h4 class="background-medium"><code>module</code> heading</h4>
+      <div class="module">
+         <p>There is some text in this paragraph.</p>
+         <ul>
+            <li>Text and <a href="#">fake link</a></li>
+            <li>Text</li>
+         </ul>
+      </div>
+      <div class="module">
+         <p>There is some text in this paragraph.</p>
+         <div class="background-dark">
+	         <p>There is some text in this paragraph in a <code>background-dark</code> <code>div</code>. The content was placed in a <code>div</code> so the background spanned the width of the module.</p>
+         </div>
+         <ul>
+            <li>Text and <a href="#">fake link</a></li>
+            <li>Text</li>
+         </ul>
+		</div>
+   </div>
+   <div class="span-2 row-end">
+      <h4 class="background-accent"><code>module</code> <code>background-accent</code> heading</h4>
+      <div class="module">
+         <p>There is some text in this paragraph.</p>
+         <ul>
+            <li>Text and <a href="#">fake link</a></li>
+            <li>Text</li>
+         </ul>
+         <div class="indent-medium margin-right-medium">
+            <table class="table-simplify table-condensed width-100">
+               <thead>
+                  <tr>
+                     <th>Header</th>
+                     <th>Header</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>Data</td>
+                     <td>Data</td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+        </div>
+   </div>
+
+</div>
+<div class="clear"></div>
+
 <h3 id="related"><code>module-related</code> style</h3>
-<div class="span-6">
+<div class="span-4">
 	<p>Use the <code>module-related</code> class to feature a <strong>list of links that point to related Web pages</strong>. This module is typically located on the right.</p>
 </div>
-<div class="span-2 margin-bottom-none">
-	<p class="color-attention">Example below:</p>
-	<div class="span-2 module-related">
-	<h2>(heading name)</h2>
-	<ul>
-		<li><a href="#related">Fake link </a></li>
-		<li>Text and <a href="#related">fake link</a></li>
-	</ul>
-	</div>
+<div class="span-2 module-related">
+   <h2>Related Links</h2>
+   <ul>
+      <li><a href="#related" >Fake link </a></li>
+      <li>Text and <a href="#related" >fake link</a></li>
+   </ul>
+</div>
+<div class="span-2 module-related">
+   <h2 class="background-accent">Related Links</h2>
+   <ul>
+      <li><a href="#related" >Fake link </a></li>
+      <li>Text and <a href="#related" >fake link</a></li>
+      <li>A large quantity of text and <a href="#related" >an impressively wide fake link</a></li>
+   </ul>
 </div>
 <div class="clear"></div>
-<h3 id="versatile"><code>module</code> style</h3>
-<div class="span-6">
-	<p>Use the <code>module</code> class for <strong>any type of content</strong>. This module is typically located on the right but can be used anywhere. It only works with a <code>span-2</code>.</p>
-</div>
-<div class="span-2">
-	<p class="color-attention">Example below:</p>
-	<div class="span-2 module">
-	<h2>(heading name)</h2>
-	<p>Paragraph of text</p>
-	<p>Image inside a <code>&lt;p&gt;</code> tag <img src="images/a7.jpg" alt="Sunflower image" /></p>
-	<form action="#" method="get">
-		<label for="mdquest">Question:</label>
-		<select size="3" id="mdquest" name="mdquest">
-		<option value="answer1">Answer 1</option>
-		<option value="answer2">Answer 2</option>
-		<option value="answer3">Answer 3</option>
-		</select>
-		<input name="button" type="button" value="Submit" />
-	</form>
-	<table class="width-70">
-		<caption>
-		Table caption goes here
-		</caption>
-		<tr>
-		<th scope="col">Header</th>
-		<th scope="col">Header</th>
-		</tr>
-		<tr>
-		<td>data</td>
-		<td>data</td>
-		</tr>
-	</table>
-	</div>
-</div>
-<div class="clear"></div>
+
 <h3 id="billboard"><code>module-billboard</code> style</h3>
-<div class="span-6">
+<div class="span-4">
 	<p>Use the <code>module-billboard</code> class to feature a list of <strong>links to specialty and newsworthy pages</strong>. This module forms part of the right menu and works with <code>span-2</code>.</p>
 </div>
-<div class="span-2 margin-bottom-none">
+<div class="span-4 margin-bottom-none">
 	<p class="color-attention">Example: Billboard <abbr title="Cascading Style Sheet">CSS</abbr></p>
-	<div class="span-2 module-billboard">
+	<div class="span-2 row-start module-billboard">
 	<h3>Billboard</h3>
 	<ul>
-		<li><a href="#billboard" class="module-billboard-background-1">Billboard link</a></li>
-		<li><a href="#billboard" class="module-billboard-background-2">Billboard link<br />
+		<li><a href="#billboard">Billboard link</a></li>
+		<li><a href="#billboard">Billboard link<br>
+		spread over 2 lines</a></li>
+	</ul>
+	</div>
+	<div class="span-2 row-end module-billboard">
+	<h3 class="background-dark">Billboard</h3>
+	<ul>
+		<li><a href="#billboard">Billboard link</a></li>
+		<li><a href="#billboard">Billboard link<br>
 		spread over 2 lines</a></li>
 	</ul>
 	</div>
 </div>
 <div class="clear"></div>
 <h3 id="event"><code>module-event</code> style</h3>
-<div class="span-6">
+<div class="span-4">
 	<p>An events menu must include a <strong>link to the main events page </strong>and can <strong>optionally include a calendar</strong>. This type of menu uses the class <code>module-event</code>. This module is typically located on the right but can be used anywhere. It only works with a <code>span-2</code>.</p>
 </div>
-<div class="span-2 margin-bottom-none">
-	<p class="color-attention">Example: Event menu</p>
-	<div class="span-2 module-event">
-	<h2>Events</h2>
-	<p><a href="#toc">View all events in detail</a></p>
-	<table class="calendar-month">
-		<caption>
-		October 2009
-		</caption>
-		<tr>
-		<th scope="col" class="calendar-weekend"><abbr title="Sunday">S</abbr></th>
-		<th scope="col"><abbr title="Monday">M</abbr></th>
-		<th scope="col"><abbr title="Tuesday">T</abbr></th>
-		<th scope="col"><abbr title="Wednesday">W</abbr></th>
-		<th scope="col"><abbr title="Thursday">T</abbr></th>
-		<th scope="col"><abbr title="Friday">F</abbr></th>
-		<th scope="col" class="calendar-weekend"><abbr title="Saturday">S</abbr></th>
-		</tr>
-		<tr>
-		<td class="calendar-weekend"></td>
-		<td></td>
-		<td></td>
-		<td>1</td>
-		<td>2</td>
-		<td>3</td>
-		<td class="calendar-weekend">4</td>
-		</tr>
-		<tr>
-		<td class="calendar-weekend">5</td>
-		<td>6</td>
-		<td>7</td>
-		<td>8</td>
-		<td class="calendar-today">9</td>
-		<td>10</td>
-		<td class="calendar-weekend">11</td>
-		</tr>
-		<tr>
-		<td class="calendar-weekend">12</td>
-		<td class="calendar-item"><a href="#event">13<span class="wb-invisible">th of October events</span></a></td>
-		<td>14</td>
-		<td>15</td>
-		<td>16</td>
-		<td>17</td>
-		<td class="calendar-weekend">18</td>
-		</tr>
-		<tr>
-		<td class="calendar-weekend">19</td>
-		<td>20</td>
-		<td>21</td>
-		<td class="calendar-item"><a href="#event">22<span class="wb-invisible">nd of October events</span></a></td>
-		<td>23</td>
-		<td>24</td>
-		<td class="calendar-weekend">25</td>
-		</tr>
-		<tr>
-		<td class="calendar-weekend">26</td>
-		<td>27</td>
-		<td>28</td>
-		<td>29</td>
-		<td>30</td>
-		<td>31</td>
-		<td class="calendar-weekend"></td>
-		</tr>
-	</table>
-	</div>
+<div class="span-4">
+   <div class="span-2 row-start module-event">
+      <h2>Events</h2>
+      <ul class="calendar-list">
+         <li>Event #1<br><span class="text-medium font-small">Loremipsum 18, 2012</span></li>
+         <li>Event #2</li>
+         <li>Event #3</li>
+         <li>Event #4</li>
+         <li class="calendar-more"><a href="#">View all events</a></li>
+      </ul>
+      <table class="calendar-month">
+         <caption>October 2009</caption>
+         <tr>
+            <th scope="col" class="calendar-weekend"><abbr title="Sunday">S</abbr></th>
+            <th scope="col"><abbr title="Monday">M</abbr></th>
+            <th scope="col"><abbr title="Tuesday">T</abbr></th>
+            <th scope="col"><abbr title="Wednesday">W</abbr></th>
+            <th scope="col"><abbr title="Thursday">T</abbr></th>
+            <th scope="col"><abbr title="Friday">F</abbr></th>
+            <th scope="col" class="calendar-weekend"><abbr title="Saturday">S</abbr></th>
+         </tr>
+         <tr>
+            <td  class="calendar-weekend"></td>
+            <td></td>
+            <td></td>
+            <td> 1</td>
+            <td> 2</td>
+            <td> 3</td>
+            <td  class="calendar-weekend"> 4</td>
+         </tr>
+         <tr>
+            <td  class="calendar-weekend"> 5</td>
+            <td> 6</td>
+            <td> 7</td>
+            <td> 8</td>
+            <td class="calendar-today">9</td>
+            <td>10</td>
+            <td  class="calendar-weekend">11</td>
+         </tr>
+         <tr>
+            <td  class="calendar-weekend">12</td>
+            <td class="calendar-item"><a href="#event">13<span class="cn-invisible ">th of October events</span></a></td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td  class="calendar-weekend">18</td>
+         </tr>
+         <tr>
+            <td  class="calendar-weekend">19</td>
+            <td>20</td>
+            <td>21</td>
+            <td class="calendar-item"><a href="#event">22<span class="cn-invisible ">nd of October events</span></a></td>
+            <td>23</td>
+            <td>24</td>
+            <td class="calendar-weekend"> 25</td>
+         </tr>
+         <tr>
+            <td class="calendar-weekend">26</td>
+            <td>27</td>
+            <td>28</td>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+            <td class="calendar-weekend"></td>
+         </tr>
+      </table>
+   </div>
+   
+   <div class="span-2 row-end module-event">
+      <h2 class="background-accent">Events</h2>
+      <table class="calendar-month">
+         <caption>
+         October 2009
+         </caption>
+         <tr>
+         <th scope="col" class="calendar-weekend"><abbr title="Sunday">S</abbr></th>
+         <th scope="col"><abbr title="Monday">M</abbr></th>
+         <th scope="col"><abbr title="Tuesday">T</abbr></th>
+         <th scope="col"><abbr title="Wednesday">W</abbr></th>
+         <th scope="col"><abbr title="Thursday">T</abbr></th>
+         <th scope="col"><abbr title="Friday">F</abbr></th>
+         <th scope="col" class="calendar-weekend"><abbr title="Saturday">S</abbr></th>
+         </tr>
+         <tr>
+         <td  class="calendar-weekend"></td>
+         <td></td>
+         <td></td>
+         <td> 1</td>
+         <td> 2</td>
+         <td> 3</td>
+         <td  class="calendar-weekend"> 4</td>
+         </tr>
+         <tr>
+         <td  class="calendar-weekend"> 5</td>
+         <td> 6</td>
+         <td> 7</td>
+         <td> 8</td>
+         <td class="calendar-today">9</td>
+         <td>10</td>
+         <td  class="calendar-weekend">11</td>
+         </tr>
+         <tr>
+         <td  class="calendar-weekend">12</td>
+         <td class="calendar-item"><a href="#event">13<span class="cn-invisible ">th of October events</span></a></td>
+         <td>14</td>
+         <td>15</td>
+         <td>16</td>
+         <td>17</td>
+         <td  class="calendar-weekend">18</td>
+         </tr>
+         <tr>
+         <td  class="calendar-weekend">19</td>
+         <td>20</td>
+         <td>21</td>
+         <td class="calendar-item"><a href="#event">22<span class="cn-invisible ">nd of October events</span></a></td>
+         <td>23</td>
+         <td>24</td>
+         <td class="calendar-weekend"> 25</td>
+         </tr>
+         <tr>
+         <td class="calendar-weekend">26</td>
+         <td>27</td>
+         <td>28</td>
+         <td>29</td>
+         <td>30</td>
+         <td>31</td>
+         <td class="calendar-weekend"></td>
+         </tr>
+      </table>
+      <ul class="calendar-list">
+         <li class="calendar-more"><a href="#toc" >View all events in detail</a></li>
+      </ul>
+   </div>
 </div>
 <div class="clear"></div>
 <h3 id="menu"><code>module-menu-section</code> style</h3>
-<p>The <code>module-menu-section</code> class styles a supplementary menu that follows the user throughout a section of the site. This module works with all grid cells.</p>
-<div class="span-2 module-menu-section float-right">
-<h2>Section menu</h2>
-<ul>
-	<li><a href="#">Link 1</a></li>
-	<li><a href="#">Link 2</a></li>
-	<li><a href="#">Link 3</a></li>
-	<li><a href="#">Link 4</a></li>
-</ul>
+<div class="span-4">
+	<p>The <code>module-menu-section</code> class styles a supplementary menu that follows the user throughout a section of the site. This module works with all grid cells.</p>
 </div>
-<div class="clear"></div>
-<div class="span-8 module-menu-section">
-<h2>Section menu</h2>
-<div class="span-4 row-start">
-	<ul>
-	<li><a href="#">Link 1</a></li>
-	<li><a href="#">Link 2</a></li>
-	<li><a href="#">Link 3</a></li>
-	<li><a href="#">Link 4</a></li>
-</ul>
+<div class="span-2 module-menu-section">
+   <h4>default heading</h4>
+   <ul>
+      <li><a href="#">Fake link</a></li>
+      <li>
+      	<a href="#">Fake link</a>
+         <ul>
+            <li><a href="#">Fake link</a></li>
+            <li><a href="#">Fake link</a></li>
+            <li><a href="#">Fake link</a></li> 
+         </ul>
+      </li>
+      <li><a href="#">Fake link</a></li>
+      <li><a href="#">Fake link</a></li>
+   </ul>
 </div>
-<div class="span-4 row-end">
-	<ul>
-	<li><a href="#">Link 1</a></li>
-	<li><a href="#">Link 2</a></li>
-	<li><a href="#">Link 3</a></li>
-	<li><a href="#">Link 4</a></li>
-</ul>
-</div>
+<div class="span-2 row-end module-menu-section">
+   <h4 class="background-accent"><code>background-accent</code> heading</h4>
+   <ul>
+      <li><a href="#">Fake link</a></li>
+      <li><a href="#">Fake link</a></li>
+      <li><a href="#">Fake link</a></li>
+      <li><a href="#">Fake link</a></li>
+   </ul>
 </div>
 <div class="clear"></div>
 <h3 id="toc"><code>module-table-contents</code> style</h3>
 <p>Use the <code>module-table-contents</code> class to create a <strong>table of contents</strong>. For consistency and to keep things simple, table of contents should only use a <code>span-4</code> or a <code>span-6</code>. Each can have multiple columns of links. That is more than enough options while still adheres to a standard format.</p>
-<p class="color-attention">Examples below:</p>
-<div class="span-4 module-table-contents">
-	<h2>Table of contents</h2>
-	<ul>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	</ul>
-</div>
-<div class="clear"></div>
-<div class="span-4 module-table-contents">
-	<h2>Table of contents</h2>
-	<div class="span-2 row-start">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-	<div class="span-2 row-end">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-table-contents">
-	<h2>Table of contents</h2>
-	<ul>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	<li><a href="#toc">Fake link</a></li>
-	</ul>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-table-contents">
-	<h2>Table of contents</h2>
-	<div class="span-3 row-start">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-	<div class="span-3 row-end">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-table-contents">
-	<h2>Table of contents</h2>
-	<div class="span-2 row-start">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-	<div class="span-2">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-	<div class="span-2 row-end">
-	<ul>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-		<li><a href="#toc">Fake link</a></li>
-	</ul>
-	</div>
-</div>
-<div class="clear"></div>
-<h3 id="welcome"><code>module-welcomepage</code> style</h3>
-<p>Use the <code>module-welcomepage</code> class <strong>for welcome pages/homepages</strong> to feature a list of links. This module leaves enough room for a right hand menu.</p>
-<p class="color-attention">Examples below:</p>
-<div class="span-4">
-	<div class="span-4 module-welcomepage margin-bottom-none">
-	<h2>(heading)</h2>
-	<ul>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-	</ul>
-	<p class="align-right"><a href="#welcome">align-right link</a></p>
-	</div>
-</div>
-<div class="span-2"></div>
-<div class="clear"></div>
-<div class="span-4">
-	<div class="span-4 module-welcomepage margin-bottom-none">
-	<h2>(heading)</h2>
-	<div class="span-2 row-start">
-		<ul>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
+
+<details class="span-4 view-example">
+	<summary>Examples</summary>
+	<div class="span-4 module-table-contents">
+		<h2>Table of contents</h2>
+		<ul class="column-two">
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
+			<li><a href="#toc">Fake link</a></li>
 		</ul>
 	</div>
-	<div class="span-2 row-end">
-		<ul>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		<li><a href="#welcome">Fake link</a></li>
-		</ul>
-	</div>
-	<p class="align-right">More: <a href="#welcome">align-right link</a></p>
-	</div>
-</div>
-<div class="span-2"></div>
+</details>
+
+<details class="span-4 view-code">
+	<summary>Sample Code</summary>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;span-4 module-table-contents&quot;&gt;
+	&lt;h2&gt;Table of contents&lt;/h2&gt;
+	&lt;ul class=&quot;column-three&quot;&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;#toc&quot;&gt;Fake link&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+</details>
 <div class="clear"></div>
+
+
+
 <h3 id="poster"><code>module-poster</code> style</h3>
 <p>Use the <code>module-poster</code> class to feature <strong>a large image and a caption</strong>.</p>
-<p class="color-attention">Example below:</p>
-<div class="span-2 module-poster"><img src="images/poster.jpg" alt="T" />
-	<p>Laura and Martha - UxWG conference</p>
-</div>
+
+<details class="span-4 view-example">
+	<summary>Example</summary>
+	<div class="width-50 module-poster">
+		<img src="images/poster.jpg" alt="T" />
+		<div class="image-caption">
+			<h4>Laura and Martha</h4>
+			<p>UxWG conference</p>
+		</div>
+	</div>
+</details>
+
+<details class="span-4 view-code">
+	<summary>Sample Code</summary>
+<pre class="prettyprint linenums">
+&lt;div class=&quot;width-50 module-poster&quot;&gt;
+	&lt;img src=&quot;images/poster.jpg&quot; alt=&quot;T&quot; /&gt;
+	&lt;div class=&quot;image-caption&quot;&gt;
+		&lt;h4&gt;Laura and Martha&lt;/h4&gt;
+		&lt;p&gt;UxWG conference&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</details>
 <div class="clear"></div>
-<h3 id="alert"><code>module-alert</code> style</h3>
-<p>Use the the <code>module-alert</code> class to alert the user to<strong> important temporary information</strong>, for example systems are down, error messages, or here is a pending change to X.</p>
+
+<h3><a id="alert"></a><code>module-alert</code> style</h3>
+<p>Use the the <code>module-alert</code> class  to  alert the user to<strong> important temporary information</strong>, for example systems are down, error messages, or here is a  pending change to X. </p>
+
+<details class="span-8 view-example">
+	<summary>Examples</summary>
+	<div class="module-alert span-4 row-start">
+		<h3 class="font-xlarge"><span class="color-dark">Alert: </span> Lorem ipsum dolor sit amet</h3>
+	   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+	</div>
+	<div class="module-alert module-simplify span-4 row-end">
+		<h3 class="font-xlarge"><span class="color-dark">Alert: </span> Lorem ipsum dolor sit amet</h3>
+	   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+	   <p><a href="#" class="button button-alert">Alert</a></p>
+	</div>
+	<div class="clear"> </div>
+</details>
+
+<h3><a id="attention"></a><code>module-attention</code> style</h3>
+<p>Use the <code>module-attention</code> class to call attention to a important information. </p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
+
+<div class="module-attention span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Attention: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
+<div class="module-attention module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Attention: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-attention">Attention</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
+<div class="clear"> </div>
+
+<h3><a id="note"></a><code>module-note</code> style</h3>
+<p>Use the <code>module-note</code> class to call attention to a <strong>feature-worthy information</strong>, for example notes or advisories. </p>
+<p class="color-note">Examples below:</p>
+
+<div class="module-note span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Note: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-5 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
+<div class="module-note module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Note: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-dark">Note</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-6 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-alert">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="attention"><code>module-attention</code> style</h3>
-<p>Use the <code>module-attention</code> class to call attention to a important information.</p>
+<div class="clear"> </div>
+
+<h3><a id="info"></a><code>module-info</code> style</h3>
+<p>Use the <code>module-info</code> class to call attention to a feature-worthy information. </p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
+
+<div class="module-info span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Information: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
+<div class="module-info module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Information: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-info">Information</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-attention">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="note"><code>module-note</code> style</h3>
-<p>Use the <code>module-note</code> class to call attention to a <strong>feature-worthy information</strong>, for example notes or advisories.</p>
-<p class="color-attention">Examples below:</p>
-<div class="span-2 module-note">
-	<p><strong>Do you know?</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-3 module-note">
-	<p><strong>Be advised:</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-4 module-note">
-	<p><strong>Note:</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-note">
-	<p><strong>Do you know?</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-note">
-	<p><strong>Be advised:</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-note">
-	<p><strong>Be advised:</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-note">
-	<p><strong>Be advised:</strong></p>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="info"><code>module-info</code> style</h3>
-<p>Use the <code>module-info</code> class to call attention to a feature-worthy information.</p>
-<p class="color-attention">Examples below:</p>
-<div class="span-2 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-3 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-4 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-info">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 margin-bottom-none">
-	<h3 id="question"><code>module-question</code> and <code>module-answer</code> style</h3>
-	<p>Use the <code>module-question</code> and the <code>module-answer</code> classes to create<strong> <abbr title="Frequently Asked Questions">FAQ</abbr>s or feature <abbr title="Question and Answer">Q&amp;A</abbr>s</strong> sections.</p>
-</div>
-<div class="clear"></div>
-<p class="color-attention">Example (stacked):</p>
-<div class="span-8 module-question">
-	<p><strong>Question:</strong> Ask you question here.</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-answer">
-	<p><strong>Answer:</strong> Put your answer here.</p>
-</div>
-<div class="clear"></div>
+<div class="clear"> </div>
+
 <div class="span-6 margin-bottom-none">
-	<p class="color-attention">Example (side-by-side):</p>
+			<h3><a id="question"></a><code>module-question</code> and <code>module-answer</code> style</h3>
+			<p>Use the <code>module-question</code> and the <code>module-answer</code> classes  to create<strong> <abbr title="Frequently Asked Questions">FAQ</abbr>s or feature <abbr title="Question and Answer">Q&amp;A</abbr>s</strong> sections.</p>
 </div>
-<div class="clear"></div>
-<div class="span-8 equalize">
-	<div class="span-4 module-question row-start">
-	<p><strong>Question:</strong> Ask you question here.</p>
-	</div>
-	<div class="span-4 module-answer row-end">
-	<p><strong>Answer:</strong> Put your answer here.</p>
-	<p><strong>Notice that they are both the same height thanks to jQuery!</strong></p>
-	</div>
+<div class="clear"> </div>
+<p class="color-attention">Example (stacked): </p>
+
+<div class="equalize">
+   <div class="module-question span-4">
+      <h3 class="font-xlarge"><span class="color-dark">Question: </span> Lorem ipsum dolor sit amet</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   </div>
+   <div class="module-answer span-4">
+      <h3 class="font-xlarge"><span class="color-dark">Answer: </span> Lorem ipsum dolor sit amet</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+      <p><a href="#" class="button button-dark">Answer</a></p>
+   </div>
 </div>
-<div class="clear"></div>
-<h3 id="tool"><code>module-tool</code> style</h3>
+<div class="clear"> </div>
+
+<div class="equalize">
+   <div class="module-question module-simplify span-4">
+      <h3 class="font-xlarge"><span class="color-dark">Question: </span> Lorem ipsum dolor sit amet</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   </div>
+   <div class="module-answer module-simplify span-4">
+      <h3 class="font-xlarge"><span class="color-dark">Answer: </span> Lorem ipsum dolor sit amet</h3>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+      <p><a href="#" class="button button-dark">Answer</a></p>
+   </div>
+</div>
+<div class="clear"> </div>
+
+<h3><a id="tool"></a><code>module-tool</code> style</h3>
 <p>Use the <strong>module-tool</strong> class to call attention to a tool or similar solution/product that is featured on the page.</p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-tool">
-	<p>Example text</p>
+
+<div class="module-tool span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Tool: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-tool">
-	<p>Example text</p>
+<div class="module-tool module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Tool: </span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button">Tool</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-tool">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-tool">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-tool">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-tool">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-tool">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="inprogress"><code>module-inprogress</code> style</h3>
+<div class="clear"> </div>
+
+<h3><a id="inprogress"></a><code>module-inprogress</code> style</h3>
 <p>Use the <code>module-inprogress</code> class to call attention to content that is in-progress or being worked on.</p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-inprogress">
-	<p>Example text</p>
+
+<div class="module-inprogress span-4">
+	<h3 class="font-xlarge"><span class="color-dark">In Progress:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-inprogress">
-	<p>Example text</p>
+<div class="module-inprogress module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">In Progress:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-dark">In Progress</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-inprogress">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-inprogress">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-inprogress">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-inprogress">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-inprogress">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="refer"><code>module-refer</code> style</h3>
-<p>Use the <code>module-refer</code> class to call attention to a the action of referring something.</p>
+<div class="clear"> </div>
+
+<h3><a id="refer"></a><code>module-refer</code> style</h3>
+<p>Use the <code>module-refer</code> class to call attention to a the action of referring something. </p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-refer">
-	<p>Example text</p>
+
+<div class="module-refer span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Refer:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-refer">
-	<p>Example text</p>
+<div class="module-refer module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Refer:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-dark">Refer</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-refer">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-refer">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-refer">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-refer">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-refer">
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="summary"><code>module-summary</code> style</h3>
+<div class="clear"> </div>
+
+<h3><a id="summary"></a><code>module-summary</code> style</h3>
 <p>Use the <code>module-summary</code> class to feature <strong>content summaries, recaps</strong> and <strong>reviews</strong>.</p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-summary">
-	<p><strong>Recap:</strong> Example text</p>
+
+<div class="module-summary span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Summary:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-summary">
-	<p><strong>Review:</strong> Example text</p>
+<div class="module-summary module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Summary:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-confirm">Summary</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-summary">
-	<p><strong>Summary:</strong> Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-summary">
-	<p><strong>Recap:</strong> Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-summary">
-	<p><strong>Review:</strong> Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-summary">
-	<p><strong>Review:</strong> Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-summary">
-	<p><strong>Review:</strong> Example text</p>
-</div>
-<div class="clear"></div>
-<h3 id="archive"><code>module-archive</code> style</h3>
-<p>Use the <code>module-archive</code> class to inform the user that the page contains archived information.</p>
+<div class="clear"> </div>
+
+<h3><a id="archive"></a><code>module-archive</code> style</h3>
+<p>Use the <code>module-archive</code> class to inform the user that the page contains archived information. </p>
 <p class="color-attention">Examples below:</p>
-<div class="span-2 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
+
+<div class="module-archive span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Archive:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
 </div>
-<div class="clear"></div>
-<div class="span-3 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
+<div class="module-archive module-simplify span-4">
+	<h3 class="font-xlarge"><span class="color-dark">Archive:</span> Lorem ipsum dolor sit amet</h3>
+   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida,   ipsum vitae malesuada pellentesque, mauris purus accumsan ipsum, sed   porta lectus justo ac mauris. Mauris mattis, felis eu rutrum egestas,   ligula lectus interdum turpis, nec lacinia mauris elit in urna. Maecenas   vitae luctus mi. Nulla facilisi. Vivamus elementum scelerisque   porttitor. Nulla non faucibus quam. Mauris quam lacus, adipiscing in   iaculis vitae, faucibus nec nisl.</p>
+   <p><a href="#" class="button button-dark">Archive</a></p>
 </div>
-<div class="clear"></div>
-<div class="span-4 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-5 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-6 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-7 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
-<div class="span-8 module-archive">
-	<h2>Heading</h2>
-	<p>Example text</p>
-</div>
-<div class="clear"></div>
+<div class="clear"> </div>
+
 <h3 id="contact"><code>module-contact</code> style</h3>
 <p>Use the <code>module-contact</code> to feature <strong>basic contact information</strong> (complex information should use a regular table instead of this <abbr title="Cascading Style Sheet">CSS</abbr> module).</p>
 <p class="color-attention">Example below:</p>
@@ -3954,120 +4091,6 @@ Forgot paragraph tag (not ideal)
 		<div>November 19, 2009</div>
 	This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</li>
 	</ol>
-</div>
-<div class="clear"></div>
-<h3 id="form"><code>module-form-fluid</code> style</h3>
-<div class="span-4">
-	<p class="color-attention">No <abbr title="Cascading Style Sheet">CSS</abbr> applied - looks crazy as form elements are inline elements. Therefore you have to put them in <code>&lt;div&gt;</code> or <code>&lt;p&gt;</code> elements so they don't flow together. This extra code has could be avoided with proper <abbr title="Cascading Style Sheet">CSS</abbr>, like <code>module-form-fluid</code>.</p>
-	<form action="#">
-	<fieldset>
-	<legend>Personal Information</legend>
-	<label for="first-name1">First Name: </label>
-	<input type="text" id="first-name1" name="first-name1" value="" />
-	<label for="last-name1">Last Name: </label>
-	<input type="text" id="last-name1" name="last-name1" value="" />
-	<label for="address1a">Address: </label>
-	<input type="text" id="address1a" name="address1a" value="" />
-	<label for="address2a">Address 2: </label>
-	<input type="text" id="address2a" name="address2a" value="" />
-	<label for="city1">City: </label>
-	<input type="text" id="city1" name="city1" value="" />
-	<label for="state1">State/Province: </label>
-	<select name="state1" id="state1">
-		<option value="">Select Province...</option>
-		<option value="AB">Alberta</option>
-		<option value="BC">British Columbia</option>
-		<option value="MB">Manitoba</option>
-		<option value="NB">New Brunswick</option>
-		<option value="NF">Newfoundland and Labrador</option>
-		<option value="NT">Northwest Territories</option>
-		<option value="NS">Nova Scotia</option>
-		<option value="ON">Ontario</option>
-		<option value="PE">Prince Edward Island</option>
-		<option value="QC">Quebec</option>
-		<option value="SK">Saskatchewan</option>
-		<option value="YT">Yukon</option>
-	</select>
-	<label for="country1">Country: </label>
-	<select name="country1" id="country1">
-		<option value="Canada">Canada</option>
-	</select>
-	<label for="postal1">Postal Code: </label>
-	<input type="text" id="postal1" name="postal1" value="" />
-	<div>
-		<fieldset>
-		<legend>Choose one:</legend>
-		<label for="datad">Option 1</label>
-		<input name="checkbox" type="checkbox" id="datad" value="checkbox" />
-		<label for="datae">Option 2</label>
-		<input name="checkbox" type="checkbox" id="datae" value="checkbox" />
-		<label for="dataf">Option 3</label>
-		<input name="checkbox" type="checkbox" id="dataf" value="checkbox" />
-		</fieldset>
-	</div>
-	<label for="phone1">Phone Number: </label>
-	<input type="text" id="phone1" name="phone1" value="" />
-	<label for="email1">Email Address: </label>
-	<input type="text" id="email1" name="email1" value="" />
-	<input type="submit" value="Register" />
-	</fieldset>
-	</form>
-</div>
-<div class="span-4 module-form-fluid">
-	<p class="color-attention"><code>module-form-fluid</code> and <code>module-form-fluid-none</code> <abbr title="Cascading Style Sheet">CSS</abbr> applied</p>
-	<form action="#">
-	<fieldset>
-	<legend>Personal Information</legend>
-	<label for="first-name2">First Name: </label>
-	<input type="text" id="first-name2" name="first-name2" value="" />
-	<label for="last-name2">Last Name: </label>
-	<input type="text" id="last-name2" name="last-name2" value="" />
-	<label for="address1b">Address: </label>
-	<input type="text" id="address1b" name="address1b" value="" />
-	<label for="address2b">Address 2: </label>
-	<input type="text" id="address2b" name="address2b" value="" />
-	<label for="city2">City: </label>
-	<input type="text" id="city2" name="city2" value="" />
-	<label for="state2">State/Province: </label>
-	<select name="state2" id="state2">
-		<option value="">Select Province...</option>
-		<option value="AB">Alberta</option>
-		<option value="BC">British Columbia</option>
-		<option value="MB">Manitoba</option>
-		<option value="NB">New Brunswick</option>
-		<option value="NF">Newfoundland and Labrador</option>
-		<option value="NT">Northwest Territories</option>
-		<option value="NS">Nova Scotia</option>
-		<option value="ON">Ontario</option>
-		<option value="PE">Prince Edward Island</option>
-		<option value="QC">Quebec</option>
-		<option value="SK">Saskatchewan</option>
-		<option value="YT">Yukon</option>
-	</select>
-	<label for="country2">Country: </label>
-	<select name="country2" id="country2">
-		<option value="Canada">Canada</option>
-	</select>
-	<label for="postal2">Postal Code: </label>
-	<input type="text" id="postal2" name="postal2" value="" />
-	<div class="module-form-fluid-none">
-		<fieldset>
-		<legend>Choose one:</legend>
-		<label for="dataa">Option 1</label>
-		<input name="checkbox" type="checkbox" id="dataa" value="checkbox" />
-		<label for="datab">Option 2</label>
-		<input name="checkbox" type="checkbox" id="datab" value="checkbox" />
-		<label for="datac">Option 3</label>
-		<input name="checkbox" type="checkbox" id="datac" value="checkbox" />
-		</fieldset>
-		<label for="phone2">Phone Number: </label>
-		<input type="text" id="phone2" name="phone2" value="" />
-	</div>
-	<label for="email2">Email Address: </label>
-	<input type="text" id="email2" name="email2" value="" />
-	<input type="submit" value="Register" />
-	</fieldset>
-	</form>
 </div>
 <div class="clear"></div>
 
