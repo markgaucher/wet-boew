@@ -2230,7 +2230,6 @@ Forgot paragraph tag (not ideal)
 		<li>update</li>
 		</ul>
 	</div>
-	</div>
 </div>
 <div class="clear"></div>
 <h3 id="fs">Font Size</h3>
@@ -2849,7 +2848,7 @@ Forgot paragraph tag (not ideal)
          <td>Data</td>
       </tr>
 	</tbody>
-   <caption>Default table accent zebra style</caption>
+   <caption>Default table accent style</caption>
 </table>
 
 <table class="wet-boew-zebra span-8">
@@ -2861,6 +2860,11 @@ Forgot paragraph tag (not ideal)
       </tr>
 	</thead>
    <tbody>
+      <tr>
+         <td>Data</td>
+         <td>Data</td>
+         <td>Data</td>
+      </tr>
       <tr>
          <td>
 			<ul>
@@ -2883,13 +2887,8 @@ Forgot paragraph tag (not ideal)
 		 </td>
          <td>Data</td>
       </tr>
-      <tr>
-         <td>Data</td>
-         <td>Data</td>
-         <td>Data</td>
-      </tr>
 	</tbody>
-   <caption>Default table accent style</caption>
+   <caption>Default table accent zebra style</caption>
 </table>
 
 <table class="table-simplify span-8">
@@ -3394,26 +3393,192 @@ Forgot paragraph tag (not ideal)
 	</tr>
 </table>
 <h3 id="embedded">Embedded navigation <abbr title="Cascading Style Sheet">CSS</abbr></h3>
-<p>This class allows for embedded page navigation.</p>
-<p><strong>Alpha links</strong></p>
-<div class="span-6 margin-bottom-none">
-	<div class="embedded-nav"> <a href="#embedded">A<span class="wb-invisible"> topics</span></a> <a href="#embedded">B<span class="wb-invisible"> topics</span></a> <span class="embedded-link-none">C</span><span class="wb-invisible"> topics</span> <a href="#embedded">D<span class="wb-invisible"> topics</span></a> <a href="#embedded">E<span class="wb-invisible"> topics</span></a> <a href="#embedded">F<span class="wb-invisible"> topics</span></a> <a href="#embedded">G<span class="wb-invisible"> topics</span></a> <a href="#embedded" class="embedded-link-active">H<span class="wb-invisible"> topics</span></a> <a href="#embedded">I<span class="wb-invisible"> topics</span></a> <a href="#embedded">J<span class="wb-invisible"> topics</span></a> <a href="#embedded">K<span class="wb-invisible"> topics</span></a> <a href="#embedded">L<span class="wb-invisible"> topics</span></a> <span class="embedded-link-none">M</span><span class="wb-invisible"> topics</span> <a href="#embedded">N<span class="wb-invisible"> topics</span></a> <a href="#embedded">O<span class="wb-invisible"> topics</span></a> <a href="#embedded">P<span class="wb-invisible"> topics</span></a> <a href="#embedded">Q<span class="wb-invisible"> topics</span></a> <a href="#embedded">R<span class="wb-invisible"> topics</span></a> <a href="#embedded">S<span class="wb-invisible"> topics</span></a> <a href="#embedded">T<span class="wb-invisible"> topics</span></a> <a href="#embedded">U<span class="wb-invisible"> topics</span></a> <a href="#embedded">V<span class="wb-invisible"> topics</span></a> <span class="embedded-link-none">W</span><span class="wb-invisible"> topics</span> <a href="#embedded">X<span class="wb-invisible"> topics</span></a> <a href="#embedded">Y<span class="wb-invisible"> topics</span></a> <a href="#embedded">Z<span class="wb-invisible"> topics</span></a> </div>
+<p>This class allows for embedded page navigation. The navigation may be based off an unordered list or paragraph text. To make the unordered list display horizontally, simply use the <code>menu-horizontal</code> class.</p>
+
+<div class="span-4">
+	<h4>Paragraph</h4>
+   <p>
+      <a href="#embedded">Primary Action</a>
+      <a href="#embedded">Action</a>
+   </p>
+   <h4>Paragraph: <code>button</code></h4>
+   <p>
+      <a href="#embedded" class="button button-accent">Primary Action</a>
+      <a href="#embedded" class="button">Action</a>
+   </p>
+   <h4>Paragraph: <code>button</code> <code>button-group</code></h4>
+   <p class="button-group">
+      <a href="#embedded" class="button button-accent">Primary Action</a>
+      <a href="#embedded" class="button">Action</a>
+   </p>
+   <h4>Paragraph: <code>button</code> <code>button-group</code> <code>button-toolbar</code></h4>
+   <div class="button-toolbar">
+      <p class="button-group">
+         <a href="#embedded" class="button button-accent">Primary Action</a>
+         <a href="#embedded" class="button">Action</a>
+      </p>
+      <p class="button-group">
+         <a href="#embedded" class="button">Action</a>
+         <a href="#embedded" class="button">Action</a>
+      </p>
+      <p class="button-group">
+         <a href="#embedded" class="button">Help</a>
+      </p>
+   </div>
 </div>
-<div class="clear"></div>
-<p class="margin-bottom-none">Code each link so it is descriptive as follows:</p>
-<p><code>&lt;a href=&quot;#&quot;&gt;A&lt;span class=&quot;wb-invisible &quot;&gt; topics&lt;/span&gt;&lt;/a&gt; </code></p>
-<p class="margin-top-large"><strong>Page navigation links</strong></p>
-<div class="span-6 margin-bottom-none">
-	<div class="embedded-nav"> <a href="#embedded">Previous article</a> <a href="#embedded">Return to Interaction Fall 2009</a> <a href="#embedded">Next article</a> </div>
+<div class="span-4">
+	<h4>Unordered List</h4>
+   <ul>
+      <li><a href="#embedded">Primary Action</a></li>
+      <li><a href="#embedded">Action</a></li>
+   </ul>
+   <h4>Unordered List: <code>menu-horizontal</code></h4>
+   <ul class="menu-horizontal">
+      <li><a href="#embedded">Primary Action</a></li>
+      <li><a href="#embedded">Action</a></li>
+   </ul>
+   <h4>Unordered List: <code>menu-horizontal</code> <code>button</code></h4>
+   <ul class="menu-horizontal">
+      <li><a href="#embedded" class="button button-accent">Primary Action</a></li>
+      <li><a href="#embedded" class="button">Action</a></li>
+   </ul>
 </div>
-<div class="clear"></div>
-<p class="margin-top-large"><strong>Pagination links</strong></p>
-<div class="span-6 margin-bottom-none">
-	<div class="embedded-nav"> <a href="#embedded">Previous<span class="wb-invisible"> page of search results</span></a> <a href="#embedded">1<span class="wb-invisible">: Page 1 of search results</span></a> <a href="#embedded">2<span class="wb-invisible">: Page 2 of search results</span></a> <span class="embedded-link-active">3<span class="wb-invisible">: Page 3 of search results</span></span> <a href="#embedded">4<span class="wb-invisible">: Page 4 of search results</span></a> <a href="#embedded">5<span class="wb-invisible">: Page 5 of search results</span></a> <a href="#embedded">6<span class="wb-invisible">: Page 6 of search results</span></a> <a href="#embedded">7<span class="wb-invisible">: Page 7 of search results</span></a> <a href="#embedded">8<span class="wb-invisible">: Page 8 of search results</span></a> <a href="#embedded">9<span class="wb-invisible">: Page 9 of search results</span></a> <a href="#embedded">10<span class="wb-invisible">: Page 10 of search results</span></a> <a href="#embedded">Next<span class="wb-invisible"> page of search results</span></a> </div>
+<div class="clear"> </div>
+   
+<div class="span-8">     
+	<h4>Examples</h4>
+   <ul class="menu-horizontal">
+      <li><a href="#embedded" class="button button-small">A<span class="cn-invisible"> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">B<span class="cn-invisible "> topics</span></a></li>
+      <li><a class="button button-small button-disabled">C<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">D<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">E<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">F<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">G<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small button-accent button-disabled">H<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">I<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">J<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">K<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">L<span class="cn-invisible "> topics</span></a></li>
+      <li><a class="button button-small button-disabled">M<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">N<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">O<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">P<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Q<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">R<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">S<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">T<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">U<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">V<span class="cn-invisible "> topics</span></a></li>
+      <li><a class="button button-small button-disabled">W<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">X<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Y<span class="cn-invisible "> topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Z<span class="cn-invisible "> topics</span></a></li>
+   </ul>
+
+   <p>
+      <a href="#embedded" class="button button-small">A<span class="cn-invisible">topics</span></a>
+      <a href="#embedded" class="button button-small">B<span class="cn-invisible ">topics</span></a>
+      <span class="button button-small button-none">C</span><span class="cn-invisible ">topics</span>
+      <a href="#embedded" class="button button-small">D<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">E<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">F<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">G<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small button-attention button-disabled">H<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">I<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">J<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">K<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">L<span class="cn-invisible ">topics</span></a> 
+      <span class="button button-small button-none">M</span><span class="cn-invisible ">topics</span>
+      <a href="#embedded" class="button button-small">N<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">O<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">P<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">Q<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">R<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">S<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">T<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">U<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">V<span class="cn-invisible ">topics</span></a>
+      <span class="button button-small button-none">W</span><span class="cn-invisible ">topics</span>
+      <a href="#embedded" class="button button-small">X<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">Y<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small">Z<span class="cn-invisible ">topics</span></a>
+   </p>
+   
+   <p>
+      <a href="#embedded" class="button button-small button-accent">Previous<span class="cn-invisible">page of search results</span></a>
+      <a href="#embedded" class="button button-small">1<span class="cn-invisible ">: Page 1 of search results</span></a>
+      <a href="#embedded" class="button button-small">2<span class="cn-invisible ">: Page 2 of search results</span></a>
+      <span class="button button-small button-attention button-disabled">3<span class="cn-invisible ">: Page 3 of search results</span></span>
+      <a href="#embedded" class="button button-small">4<span class="cn-invisible ">: Page 4 of search results</span></a>
+      <a href="#embedded" class="button button-small">5<span class="cn-invisible ">: Page 5 of search results</span></a>
+      <a href="#embedded" class="button button-small">6<span class="cn-invisible ">: Page 6 of search results</span></a>
+      <a href="#embedded" class="button button-small">7<span class="cn-invisible ">: Page 7 of search results</span></a>
+      <a href="#embedded" class="button button-small">8<span class="cn-invisible ">: Page 8 of search results</span></a>
+      <a href="#embedded" class="button button-small">9<span class="cn-invisible ">: Page 9 of search results</span></a>
+      <a href="#embedded" class="button button-small">10<span class="cn-invisible ">: Page 10 of search results</span></a>
+      <a href="#embedded" class="button button-small button-accent">Next<span class="cn-invisible ">page of search results</span></a>
+   </p>
+   
+   <p class="button-group">
+      <a href="#" role="tab" class="button">Previous</a>
+      <a href="#" role="tab" class="button">Table of Contents</a>
+      <a href="#" role="tab" class="button">Next</a>
+   </p>
+   
+   
+   <ul class="menu-horizontal span-3">
+      <li><a href="#embedded" class="button button-small">A<span class="cn-invisible">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">B<span class="cn-invisible ">topics</span></a></li>
+      <li><a class="button button-small button-disabled">C<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">D<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">E<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">F<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">G<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small button-accent button-disabled">H<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">I<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">J<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">K<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">L<span class="cn-invisible ">topics</span></a></li>
+      <li><a class="button button-small button-disabled">M<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">N<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">O<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">P<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Q<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">R<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">S<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">T<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">U<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">V<span class="cn-invisible ">topics</span></a></li>
+      <li><a class="button button-small button-disabled">W<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">X<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Y<span class="cn-invisible ">topics</span></a></li>
+      <li><a href="#embedded" class="button button-small">Z<span class="cn-invisible ">topics</span></a></li>
+   </ul>
 </div>
-<div class="clear"></div>
-<p class="margin-bottom-none">Code each link so it is descriptive as follows:</p>
-<p><code>&lt;a href=&quot;#&quot;&gt;1&lt;span class=&quot;wb-invisible &quot;&gt;: Page 1 of search results&lt;/span&gt;&lt;/a&gt; </code></p>
+<div class="clear"> </div>
+
+<div class="span-8">
+   <h4>Sample Code</h4>
+   
+   <p class="button-group">
+      <a href="#" role="tab" class="button">News Releases</a>
+      <a href="#" role="tab" class="button">Features</a>
+      <a href="#" role="tab" class="button">Speeches and Statements</a>
+      <a href="#" role="tab" class="button button-disabled">Media Coverage</a>
+   </p>
+   
+   <pre>
+&lt;p class="button-group">
+   &lt;a href="#" role="tab" class="button">News Releases&lt;/a>
+   &lt;a href="#" role="tab" class="button">Features&lt;/a>
+   &lt;a href="#" role="tab" class="button">Speeches and Statements&lt;/a>
+   &lt;a href="#" role="tab" class="button button-disabled">Media Coverage&lt;/a>
+&lt;/p></pre>
+</div>
+<div class="clear"> </div>
+
+
 <h3 id="modules">Grid modules overview </h3>
 <p>Modules are specific <abbr title="Cascading Style Sheet">CSS</abbr> classes that work within the grid system and create an entire presentation style. By using one module class, you can easily create a full page or just a small section of stylized content. The <abbr title="Cascading Style Sheet">CSS</abbr> is written to style every detail of the grid cell for a specific use and purpose. All background colours, borders and other features appear automatically.</p>
 <p>It is easy to code a module. The following is an example:</p>
@@ -3520,7 +3685,6 @@ Forgot paragraph tag (not ideal)
 	<p>Use the <code>module-billboard</code> class to feature a list of <strong>links to specialty and newsworthy pages</strong>. This module forms part of the right menu and works with <code>span-2</code>.</p>
 </div>
 <div class="span-4 margin-bottom-none">
-	<p class="color-attention">Example: Billboard <abbr title="Cascading Style Sheet">CSS</abbr></p>
 	<div class="span-2 row-start module-billboard">
 	<h3>Billboard</h3>
 	<ul>
@@ -3953,7 +4117,7 @@ Forgot paragraph tag (not ideal)
 </div>
 <div class="clear"> </div>
 
-<h3 id="contact"><code>module-contact</code> style</h3>
+<!--<h3 id="contact"><code>module-contact</code> style</h3>
 <p>Use the <code>module-contact</code> to feature <strong>basic contact information</strong> (complex information should use a regular table instead of this <abbr title="Cascading Style Sheet">CSS</abbr> module).</p>
 <p class="color-attention">Example below:</p>
 <div class="span-8 module-contact">
@@ -4010,10 +4174,10 @@ Forgot paragraph tag (not ideal)
 	</div>
 	<div class="clear"></div>
 </div>
-<div class="clear"></div>
+<div class="clear"></div>-->
 <h3 id="news"><code>module-news</code> and <code>module-spotlight</code> style</h3>
 <p>Use the <code>module-news</code> and <code>module-spotlight</code> classes for <strong>news articles and stories</strong>. The <code>module-news</code> class allows you to embed an article or story. It works in conjunction with the <code>module-news-article</code> class. The <code>module-spotlight</code> showcases a list of links to articles or stories.</p>
-<p class="color-attention">Examples below:</p>
+<!--<p class="color-attention">Examples below:</p>
 <div class="span-4 module-news">
 	<h3><a href="#news">A year in review</a></h3>
 	<div class="module-news-article"><img src="images/placeholder2.gif" alt="" width="318" height="157" />
@@ -4044,30 +4208,29 @@ Forgot paragraph tag (not ideal)
 	<li><a href="#news"><img src="images/placeholder.gif" alt="" width="100" height="62" />Retirements</a> <span><a href="#news">13 Comments</a></span></li>
 	</ul>
 </div>
-<div class="clear"></div>
+<div class="clear"></div>-->
 <div class="grid-12">
 	<div class="span-4 module-news">
-	<h3><a href="#news">Welcome a-Board!</a></h3>
+	<h3 class="margin-bottom-medium"><a href="#news">Wenim vitae molestie rutrum!</a></h3>
 	<div class="module-news-article"> <img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		<p><a href="#news">Continue reading</a></p>
-		<p><span><a href="#news">34 Comments</a></span></p>
+		<p>Fusce quis augue tortor. Aenean aliquet, enim vitae molestie rutrum, ligula est egestas eros, vel ullamcorper nulla sem sed tortor. Proin sollicitudin blandit turpis et faucibus.</p>
+		<p><a href="#news" class="button button-accent">Continue reading</a>
+		<a href="#news" class="button button-none">34 Comments</a></p>
 	</div>
 	</div>
 	<div class="span-4 module-news">
-	<h3><a href="#news">A message from <abbr title="Public Works and Government Services Canada">PWGSC</abbr></a></h3>
+	<h3 class="margin-bottom-medium"><a href="#news">Quisque blandit, leo non tempus</a></h3>
 	<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</p>
-		<p><a href="#news">Continue reading</a></p>
+		<p>Integer condimentum faucibus bibendum. Integer tempus urna ut nulla pellentesque vulputate. Quisque blandit, leo non tempus adipiscing, mi metus tempor lorem, sit amet adipiscing ipsum ipsum non ligula.</p>
+		<p><a href="#news" class="button button-accent">Continue reading</a></p>
 	</div>
 	</div>
 	<div class="span-4 module-news">
-	<h3><a href="#news">Have your say</a></h3>
+	<h3 class="margin-bottom-medium"><a href="#news">Cras sit amet</a></h3>
 	<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-		<p>Looking forward to hearing from you!</p>
-		<p><a href="#news">Cast your vote </a></p>
-		<p><span><a href="#news">25 Votes</a></span></p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum venenatis arcu, eget molestie dui mattis sed. Cras sit amet sapien purus, vitae semper lectus.</p>
+		<p><a href="#news" class="button button-accent">Cast your vote </a>
+		<a href="#news" class="button button-none">25 Votes</a></p>
 	</div>
 	</div>
 </div>
@@ -4094,6 +4257,7 @@ Forgot paragraph tag (not ideal)
 </div>
 <div class="clear"></div>
 
+<!--
 <h3 id="highlight"><code>module-higlight</code> and <code>module-highlight-details</code> style</h3>
 <p>You must add your own background color or border, as it is plain by default.</p>
 <div class="span-8 equalize">
@@ -4134,6 +4298,10 @@ Forgot paragraph tag (not ideal)
 	</div>
 </div>
 <div class="clear"></div>
+-->
+
+
+
 <h2 id="prnt">Print <abbr title="Cascading Style Sheet">CSS</abbr> and grids</h2>
 <p>Grid cells do not keep their design properties when printed, for various reasons:</p>
 <ul>
