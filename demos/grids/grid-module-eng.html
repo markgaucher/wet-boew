@@ -56,7 +56,7 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <!-- CustomScriptsCSSEnd -->
 </head>
 
-<body><div id="wb-body">
+<body class="wet-boew-prettify"><div id="wb-body">
 <div id="wb-skip">
 <ul id="wb-tphp">
 <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
@@ -430,7 +430,6 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <div class="clear"></div>
 
 
-
 <h3 id="poster"><code>module-poster</code> style</h3>
 <p>Use the <code>module-poster</code> class to feature <strong>a large image and a caption</strong>.</p>
 
@@ -551,32 +550,69 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 	</ul>
 </div>
 <div class="clear"></div>-->
-<div class="grid-12">
-	<div class="span-4 module-news">
-	<h3 class="margin-bottom-medium"><a href="#news">Wenim vitae molestie rutrum!</a></h3>
-	<div class="module-news-article"> <img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>Fusce quis augue tortor. Aenean aliquet, enim vitae molestie rutrum, ligula est egestas eros, vel ullamcorper nulla sem sed tortor. Proin sollicitudin blandit turpis et faucibus.</p>
-		<p><a href="#news" class="button button-accent">Continue reading</a>
-		<a href="#news" class="button button-none">34 Comments</a></p>
+<details class="span-8 view-example">
+	<summary>Example - News Module</summary>
+	<div class="grid-12">
+		<div class="span-4 row-start module-news">
+		<h3 class="margin-bottom-medium"><a href="#news">Wenim vitae molestie rutrum!</a></h3>
+		<div class="module-news-article"> <img src="images/placeholder3.gif" alt="" width="198" height="122" />
+			<p>Fusce quis augue tortor. Aenean aliquet, enim vitae molestie rutrum, ligula est egestas eros, vel ullamcorper nulla sem sed tortor. Proin sollicitudin blandit turpis et faucibus.</p>
+			<p><a href="#news" class="button button-accent">Continue reading</a>
+			<a href="#news" class="button button-none">34 Comments</a></p>
+		</div>
+		</div>
+		<div class="span-4 module-news">
+		<h3 class="margin-bottom-medium"><a href="#news">Quisque blandit, leo non tempus</a></h3>
+		<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
+			<p>Integer condimentum faucibus bibendum. Integer tempus urna ut nulla pellentesque vulputate. Quisque blandit, leo non tempus adipiscing, mi metus tempor lorem, sit amet adipiscing ipsum ipsum non ligula.</p>
+			<p><a href="#news" class="button button-accent">Continue reading</a></p>
+		</div>
+		</div>
+		<div class="span-4 row-end module-news">
+		<h3 class="margin-bottom-medium"><a href="#news">Cras sit amet</a></h3>
+		<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
+			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum venenatis arcu, eget molestie dui mattis sed. Cras sit amet sapien purus, vitae semper lectus.</p>
+			<p><a href="#news" class="button button-accent">Cast your vote </a>
+			<a href="#news" class="button button-none">25 Votes</a></p>
+		</div>
+		</div>
 	</div>
-	</div>
-	<div class="span-4 module-news">
-	<h3 class="margin-bottom-medium"><a href="#news">Quisque blandit, leo non tempus</a></h3>
-	<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>Integer condimentum faucibus bibendum. Integer tempus urna ut nulla pellentesque vulputate. Quisque blandit, leo non tempus adipiscing, mi metus tempor lorem, sit amet adipiscing ipsum ipsum non ligula.</p>
-		<p><a href="#news" class="button button-accent">Continue reading</a></p>
-	</div>
-	</div>
-	<div class="span-4 module-news">
-	<h3 class="margin-bottom-medium"><a href="#news">Cras sit amet</a></h3>
-	<div class="module-news-article"><img src="images/placeholder3.gif" alt="" width="198" height="122" />
-		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum venenatis arcu, eget molestie dui mattis sed. Cras sit amet sapien purus, vitae semper lectus.</p>
-		<p><a href="#news" class="button button-accent">Cast your vote </a>
-		<a href="#news" class="button button-none">25 Votes</a></p>
-	</div>
-	</div>
-</div>
 <div class="clear"></div>
+</details>
+<div class="clear"></div>
+<details class="span-8 view-code">
+	<summary>Sample Code - News Module</summary>
+	<pre class="prettyprint linenums lang-html">
+&lt;div class=&quot;grid-12&quot;&gt;
+	&lt;div class=&quot;span-4 row-start module-news&quot;&gt;
+	&lt;h3 class=&quot;margin-bottom-medium&quot;&gt;&lt;a href=&quot;#news&quot;&gt;Wenim vitae molestie rutrum!&lt;/a&gt;&lt;/h3&gt;
+	&lt;div class=&quot;module-news-article&quot;&gt; &lt;img src=&quot;images/placeholder3.gif&quot; alt=&quot;&quot; width=&quot;198&quot; height=&quot;122&quot; /&gt;
+		&lt;p&gt;Fusce quis augue tortor. Aenean aliquet, enim vitae molestie rutrum, ligula est egestas eros, vel ullamcorper nulla sem sed tortor. Proin sollicitudin blandit turpis et faucibus.&lt;/p&gt;
+		&lt;p&gt;&lt;a href=&quot;#news&quot; class=&quot;button button-accent&quot;&gt;Continue reading&lt;/a&gt;
+		&lt;a href=&quot;#news&quot; class=&quot;button button-none&quot;&gt;34 Comments&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span-4 module-news&quot;&gt;
+	&lt;h3 class=&quot;margin-bottom-medium&quot;&gt;&lt;a href=&quot;#news&quot;&gt;Quisque blandit, leo non tempus&lt;/a&gt;&lt;/h3&gt;
+	&lt;div class=&quot;module-news-article&quot;&gt;&lt;img src=&quot;images/placeholder3.gif&quot; alt=&quot;&quot; width=&quot;198&quot; height=&quot;122&quot; /&gt;
+		&lt;p&gt;Integer condimentum faucibus bibendum. Integer tempus urna ut nulla pellentesque vulputate. Quisque blandit, leo non tempus adipiscing, mi metus tempor lorem, sit amet adipiscing ipsum ipsum non ligula.&lt;/p&gt;
+		&lt;p&gt;&lt;a href=&quot;#news&quot; class=&quot;button button-accent&quot;&gt;Continue reading&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;span-4 row-end module-news&quot;&gt;
+	&lt;h3 class=&quot;margin-bottom-medium&quot;&gt;&lt;a href=&quot;#news&quot;&gt;Cras sit amet&lt;/a&gt;&lt;/h3&gt;
+	&lt;div class=&quot;module-news-article&quot;&gt;&lt;img src=&quot;images/placeholder3.gif&quot; alt=&quot;&quot; width=&quot;198&quot; height=&quot;122&quot; /&gt;
+		&lt;p&gt;Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum venenatis arcu, eget molestie dui mattis sed. Cras sit amet sapien purus, vitae semper lectus.&lt;/p&gt;
+		&lt;p&gt;&lt;a href=&quot;#news&quot; class=&quot;button button-accent&quot;&gt;Cast your vote &lt;/a&gt;
+		&lt;a href=&quot;#news&quot; class=&quot;button button-none&quot;&gt;25 Votes&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;	
+	</pre>
+</details>
+<div class="clear"></div>
+
 <h3 id="comment"><code>module-comment</code> style</h3>
 <p>Use the <code>module-comment</code> and <code>wet-boew-zebra</code> classes to style <strong>user's comments and responses</strong>.</p>
 <p class="color-attention">Example below:</p>
