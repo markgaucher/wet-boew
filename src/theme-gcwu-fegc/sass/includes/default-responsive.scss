@@ -11,7 +11,7 @@ body{
 	width:100%;
 }
 
-#gcwu-title{
+#gcwu-title-in{
 	width:360px;
 }
 
@@ -40,9 +40,9 @@ body{
 #gcwu-gcft {
 	li{
 		margin:12px 0 13px 44px;
-	}
-	li:first-child{
-		margin-left:10px;
+		&:first-child{
+			margin-left:10px;
+		}
 	}
 }
 
