@@ -56,29 +56,29 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <!-- CustomScriptsCSSEnd -->
 </head>
 
-<body class="wet-boew-prettify"><div id="wb-body">
+<body class="wet-boew-prettify"><div id="wb-body-sec">
 <div id="wb-skip">
 <ul id="wb-tphp">
 <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
-<li id="wb-skip2"><a href="#wb-nav">Skip to footer</a></li>
+<li id="wb-skip2"><a href="#wb-nav">Skip to secondary menu</a></li>
 </ul>
 </div>
 
 <div id="wb-head"><div id="wb-head-in"><header>
 <!-- HeaderStart -->
-<nav role="navigation"><div id="gcwu-gcnb"><h2>Government of Canada navigation bar</h2><div id="gcwu-gcnb-in"><div id="gcwu-gcnb-fip">
+<nav role="navigation"><div id="gcwu-gcnb"><h2><span>Site</span> menu</h2><div id="gcwu-gcnb-in"><div id="gcwu-gcnb-fip">
 <div id="gcwu-sig"><div id="gcwu-sig-in"><div id="gcwu-sig-eng" title="Government of Canada"><img src="../../build/theme-gcwu-fegc/images/sig-eng.gif" width="214" height="20" alt="Government of Canada" /></div></div></div>
 <ul>
-<li id="gcwu-gcnb1"><a rel="external" href="http://www.canada.gc.ca/menu-eng.html">Canada.gc.ca</a></li>
-<li id="gcwu-gcnb2"><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
-<li id="gcwu-gcnb3"><a rel="external" href="http://www.canada.gc.ca/aboutgov-ausujetgouv/depts/menu-eng.html">Departments</a></li>
-<li id="gcwu-gcnb-lang"><a href="grid-utilities-fra.html" lang="fr">Français</a></li>
+<li id="gcwu-gcnb1"><a  target="_blank" rel="external" href="http://www.canada.gc.ca/menu-eng.html">Canada.gc.ca</a></li>
+<li id="gcwu-gcnb2"><a  target="_blank" rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml">Services</a></li>
+<li id="gcwu-gcnb3"><a  target="_blank" rel="external" href="http://www.canada.gc.ca/aboutgov-ausujetgouv/depts/menu-eng.html">Departments</a></li>
+<li id="gcwu-gcnb-lang"><a href="application-secnav1-fra.html" lang="fr">Français</a></li>
 </ul>
 </div></div></div></nav>
 
 <div id="gcwu-bnr" role="banner"><div id="gcwu-bnr-in">
-<div id="gcwu-wmms"><div id="gcwu-wmms-in"><div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="../../build/theme-gcwu-fegc/images/wmms.gif" width="126" height="30" alt="Symbol of the Government of Canada" /></div></div></div>
-<div id="gcwu-title"><p id="gcwu-title-in"><a href="../../docs/index-eng.html">Web Experience Toolkit&#160;(WET)</a></p></div>
+<div id="gcwu-wmms"><div id="gcwu-wmms-in"><div id="gcwu-wmms-fip" title="Symbol of the Government of Canada"><img src="../../build/theme-gcwu-fegc/images/wmms.gif" width="126" height="30"  alt="Symbol of the Government of Canada" /></div></div></div>
+<div id="gcwu-title"><p id="gcwu-title-in"><a target="_blank" href="../../docs/index-eng.html">Web Experience Toolkit (WET)</a></p></div>
 
 <section role="search"><div id="gcwu-srchbx"><h2>Search</h2>
 <form action="#" method="post"><div id="gcwu-srchbx-in">
@@ -103,9 +103,10 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 
 <div id="gcwu-bc"><h2>Breadcrumb trail</h2><div id="gcwu-bc-in">
 <ol>
-<li><a href="../../docs/index-eng.html">Home</a></li>
-<li><a href="../index-eng.html">Working examples</a></li>
-<li>Grids and grid utilities</li>
+<li><a target="_blank" href="../../docs/index-eng.html">Home</a></li>
+<li><a target="_blank" href="../index-eng.html">Working examples</a></li>
+<li><a href="index-eng.html">GC Web Usability theme</a></li>
+<li>Application Template</li>
 </ol>
 </div></div>
 </nav>
@@ -116,17 +117,31 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <div id="wb-main" role="main"><div id="wb-main-in">
 <!-- MainContentStart -->
 
+
 <h1>Buttons</h1>
 
-<p>Buttons have yet to be added to the GCWU template, but the current inclination is to go with something based on Twitter Bootstrap.</p>
-<p class="color-attention">Make sure the disabled state has sufficient color contrast!</p>
+<ul>
+	<li>Date Added</li>
+	<li>Last Updated</li>
+	<li>Created By</li>
+	<li>External Links</li>
+	<li>Applied To</li>
+</ul>
 
-<table class="table-simplify table-bordered span-8">
+<p>The button classes for the CSS Grid System are based off Twitter Bootstrap. Due to colour contrast issues, the colours have been modified to pass WCAG 2.0 accessibility rules. They are styled to match the "message" module classes.</p>
+
+<h2>Usage</h2>
+<p>Button styles, as the name sugguests, are meant to be applied to buttons - both <code>input</code> and <code>button</code>. There are certain cases where it may also be appropriate to apply them to links.</p>
+<p>But when?</p>
+<p></p>
+
+<h2>Base Classes</h2>
+<table class="table-simplify span-6">
    <thead>
       <tr>
         <th>Button</th>
         <th>Disabled</th>
-        <th class="width-20">class=""</th>
+        <th>Class</th>
         <th>Description</th>
       </tr>
    </thead>
@@ -140,131 +155,180 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
       <tr>
         <td><button class="button button-accent">Accent</button></td>
         <td><button class="button button-accent button-disabled" disabled="disabled">Accent</button></td>
-        <td><code>button button-accent</code></td>
-        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+        <td><code>button-accent</code></td>
+        <td>Provides extra visual weight and identifies the primary action</td>
       </tr>
       <tr>
         <td><button class="button button-info">Info</button></td>
         <td><button class="button button-info button-disabled">Info</button></td>
-        <td><code>button button-info</code></td>
+        <td><code>button-info</code></td>
         <td>Used as an alternate to the default styles</td>
       </tr>
       <tr>
         <td><button class="button button-confirm">Confirm</button></td>
         <td><button class="button button-confirm button-disabled">Confirm</button></td>
-        <td><code>button button-confirm</code></td>
+        <td><code>button-confirm</code></td>
         <td>Indicates a successful or positive action</td>
       </tr>
       <tr>
         <td><button class="button button-alert">Alert</button></td>
         <td><button class="button button-alert button-disabled">Alert</button></td>
-        <td><code>button button-alert</code></td>
+        <td><code>button-alert</code></td>
         <td>Indicates caution should be taken with this action</td>
       </tr>
       <tr>
         <td><button class="button button-attention">Attention</button></td>
         <td><button class="button button-attention button-disabled">Attention</button></td>
-        <td><code>button button-attention</code></td>
+        <td><code>button-attention</code></td>
         <td>Indicates a dangerous or potentially negative action</td>
       </tr>
       <tr>
         <td><button class="button button-dark">Dark</button></td>
         <td><button class="button button-dark button-disabled">Dark</button></td>
-        <td><code>button button-dark</code></td>
+        <td><code>button-dark</code></td>
         <td>Alternate dark gray button, not tied to a semantic action or use</td>
       </tr>
       <tr>
         <td><button class="button button-none">None</button></td>
         <td><button class="button button-none button-disabled">None</button></td>
-        <td><code>button button-none</code></td>
+        <td><code>button-none</code></td>
         <td>Maintains the dimensions of a button without creating the visual style</td>
       </tr>
    </tbody>
 </table>
 
-<h3 id="embedded">Embedded navigation <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+
+<h2>Supporting Classes</h2>
+<h3>Button Sizes</h3>
+<p>In addition to colour, the style guide supports several different <code>button</code> sizes. A change in button size will affect the button padding and font-size. Be weary of combining the <code>button-*</code> size classes with the <code>font-*</code> size classes, as this may lead to illegible (too small) text.</p>
+
+<h2>Examples</h2>
+
+
+
+
+
+<details class="span-6 view-example">
+	<summary>View Example</summary>
+   <p>
+      <a href="#embedded" class="button button-small">button-small</a>
+      <a href="#embedded" class="button">default</a>
+      <a href="#embedded" class="button button-large">button-large</a>
+      <a href="#embedded" class="button button-xlarge">button-xlarge</a>
+   </p>
+</details>
+
+<details class="span-6 view-code">
+	<summary>Source Code</summary>
+	<pre class="prettyprint linenums">&lt;p&gt;
+  &lt;a href=&quot;#embedded&quot; class=&quot;button button-small&quot;&gt;button-small&lt;/a&gt;
+  &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;default&lt;/a&gt;
+  &lt;a href=&quot;#embedded&quot; class=&quot;button button-large&quot;&gt;button-large&lt;/a&gt;
+  &lt;a href=&quot;#embedded&quot; class=&quot;button button-xlarge&quot;&gt;button-xlarge&lt;/a&gt;
+&lt;/p&gt;</pre>
+</details>
+
+<div class="clear"></div>
+
+<h2 id="embedded">Embedded Navigation</h2>
 <p>This class allows for embedded page navigation. The navigation may be based off an unordered list or paragraph text. To make the unordered list display horizontally, simply use the <code>menu-horizontal</code> class.</p>
 
-<div class="span-4">
-	<h4>Paragraph</h4>
-   <p>
-      <a href="#embedded">Primary Action</a>
-      <a href="#embedded">Action</a>
-   </p>
-   <h4>Paragraph: <code>button</code></h4>
-   <p>
-      <a href="#embedded" class="button button-accent">Primary Action</a>
-      <a href="#embedded" class="button">Action</a>
-   </p>
-   <h4>Paragraph: <code>button</code> <code>button-group</code></h4>
-   <p class="button-group">
-      <a href="#embedded" class="button button-accent">Primary Action</a>
-      <a href="#embedded" class="button">Action</a>
-   </p>
-   <h4>Paragraph: <code>button</code> <code>button-group</code> <code>button-toolbar</code></h4>
-   <div class="button-toolbar">
-      <p class="button-group">
-         <a href="#embedded" class="button button-accent">Primary Action</a>
-         <a href="#embedded" class="button">Action</a>
-      </p>
-      <p class="button-group">
-         <a href="#embedded" class="button">Action</a>
-         <a href="#embedded" class="button">Action</a>
-      </p>
-      <p class="button-group">
-         <a href="#embedded" class="button">Help</a>
-      </p>
-   </div>
-</div>
-<div class="span-4">
-	<h4>Unordered List</h4>
-   <ul>
-      <li><a href="#embedded">Primary Action</a></li>
-      <li><a href="#embedded">Action</a></li>
-   </ul>
-   <h4>Unordered List: <code>menu-horizontal</code></h4>
-   <ul class="menu-horizontal">
-      <li><a href="#embedded">Primary Action</a></li>
-      <li><a href="#embedded">Action</a></li>
-   </ul>
-   <h4>Unordered List: <code>menu-horizontal</code> <code>button</code></h4>
-   <ul class="menu-horizontal">
-      <li><a href="#embedded" class="button button-accent">Primary Action</a></li>
-      <li><a href="#embedded" class="button">Action</a></li>
-   </ul>
-</div>
-<div class="clear"> </div>
-   
-<div class="span-8">     
-	<h4>Examples</h4>
-   <ul class="menu-horizontal">
-      <li><a href="#embedded" class="button button-small">A<span class="cn-invisible"> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">B<span class="cn-invisible "> topics</span></a></li>
-      <li><a class="button button-small button-disabled">C<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">D<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">E<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">F<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">G<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small button-accent button-disabled">H<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">I<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">J<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">K<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">L<span class="cn-invisible "> topics</span></a></li>
-      <li><a class="button button-small button-disabled">M<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">N<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">O<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">P<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">Q<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">R<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">S<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">T<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">U<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">V<span class="cn-invisible "> topics</span></a></li>
-      <li><a class="button button-small button-disabled">W<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">X<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">Y<span class="cn-invisible "> topics</span></a></li>
-      <li><a href="#embedded" class="button button-small">Z<span class="cn-invisible "> topics</span></a></li>
-   </ul>
+<h3>Unordered List</h3>
+<details class="span-6 view-example">
+	<summary>View Example - Unordered List</summary>
+	<ul class="menu-horizontal margin-bottom-medium">
+		<li><a href="#embedded" class="button button-accent">Primary Action</a></li>
+		<li><a href="#embedded" class="button">Action</a></li>
+	</ul>
+</details>
+
+<details class="span-6 view-code">
+	<summary>View Code - Unordered List</summary>
+	<pre class="prettyprint linenums">&lt;ul class=&quot;menu-horizontal&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;#embedded&quot; class=&quot;button button-accent&quot;&gt;Primary Action&lt;/a&gt;&lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+</details>
+
+<div class="clear"></div>
+
+<h3>Button</h3>
+<details class="span-6 view-example">
+	<summary>View Example - Button</summary>
+	<p>
+		<a href="#embedded" class="button button-accent">Primary Action</a>
+		<a href="#embedded" class="button">Action</a>
+	</p>
+</details>
+
+<details class="span-6 view-code">
+	<summary>View Code - Button</summary>
+	<pre class="prettyprint linenums">&lt;p&gt;
+   &lt;a href=&quot;#embedded&quot; class=&quot;button button-accent&quot;&gt;Primary Action&lt;/a&gt;
+   &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;
+&lt;/p&gt;</pre>
+</details>
+
+<div class="clear"></div>
+
+<h3>Button Group</h3>
+<details class="span-6 view-example">
+	<summary>View Example - Button Group</summary>
+	<p class="button-group">
+		<a href="#embedded" class="button button-accent">Primary Action</a>
+		<a href="#embedded" class="button">Action</a>
+	</p>	
+</details>
+
+<details class="span-6 view-code">
+	<summary>View Code - Button Group</summary>
+	<pre class="prettyprint linenums">&lt;p class=&quot;button-group&quot;&gt;
+   &lt;a href=&quot;#embedded&quot; class=&quot;button button-accent&quot;&gt;Primary Action&lt;/a&gt;
+   &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;
+&lt;/p&gt;</pre>
+</details>
+
+<div class="clear"></div>
+
+<h3>Button Toolbar</h3>
+<details class="span-6 view-example">
+	<summary>View Example - Button Toolbar</summary>
+	<div class="button-toolbar margin-top-none">
+		<p class="button-group">
+			<a href="#embedded" class="button button-accent">Primary Action</a>
+			<a href="#embedded" class="button">Action</a>
+		</p>
+		<p class="button-group">
+			<a href="#embedded" class="button">Action</a>
+			<a href="#embedded" class="button">Action</a>
+		</p>
+		<p class="button-group">
+			<a href="#embedded" class="button">Help</a>
+		</p>
+	</div>	
+</details>
+
+<details class="span-6 view-code">
+	<summary>View Code - Button Toolbar</summary>
+	<pre class="prettyprint linenums">&lt;div class=&quot;button-toolbar&quot;&gt;
+   &lt;p class=&quot;button-group&quot;&gt;
+      &lt;a href=&quot;#embedded&quot; class=&quot;button button-accent&quot;&gt;Primary Action&lt;/a&gt;
+      &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;
+   &lt;/p&gt;
+   &lt;p class=&quot;button-group&quot;&gt;
+      &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;
+      &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Action&lt;/a&gt;
+   &lt;/p&gt;
+   &lt;p class=&quot;button-group&quot;&gt;
+      &lt;a href=&quot;#embedded&quot; class=&quot;button&quot;&gt;Help&lt;/a&gt;
+   &lt;/p&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<div class="clear"></div>
+
+<div class="span-6">     
+	<h3>Examples</h3>
 
    <p>
       <a href="#embedded" class="button button-small">A<span class="cn-invisible">topics</span></a>
@@ -274,7 +338,7 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
       <a href="#embedded" class="button button-small">E<span class="cn-invisible ">topics</span></a>
       <a href="#embedded" class="button button-small">F<span class="cn-invisible ">topics</span></a>
       <a href="#embedded" class="button button-small">G<span class="cn-invisible ">topics</span></a>
-      <a href="#embedded" class="button button-small button-attention button-disabled">H<span class="cn-invisible ">topics</span></a>
+      <a href="#embedded" class="button button-small button-accent button-disabled">H<span class="cn-invisible ">topics</span></a>
       <a href="#embedded" class="button button-small">I<span class="cn-invisible ">topics</span></a>
       <a href="#embedded" class="button button-small">J<span class="cn-invisible ">topics</span></a>
       <a href="#embedded" class="button button-small">K<span class="cn-invisible ">topics</span></a>
@@ -348,85 +412,72 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 </div>
 <div class="clear"> </div>
 
-<div class="span-8">
-   <h4>Sample Code</h4>
-   
-   <p class="button-group">
-      <a href="#" role="tab" class="button">News Releases</a>
-      <a href="#" role="tab" class="button">Features</a>
-      <a href="#" role="tab" class="button">Speeches and Statements</a>
-      <a href="#" role="tab" class="button button-disabled">Media Coverage</a>
-   </p>
-   
-   <pre>
-&lt;p class="button-group">
-   &lt;a href="#" role="tab" class="button">News Releases&lt;/a>
-   &lt;a href="#" role="tab" class="button">Features&lt;/a>
-   &lt;a href="#" role="tab" class="button">Speeches and Statements&lt;/a>
-   &lt;a href="#" role="tab" class="button button-disabled">Media Coverage&lt;/a>
-&lt;/p></pre>
-</div>
-<div class="clear"> </div>
-
-
-
-
-<dl id="gcwu-date-mod" role="contentinfo">
-<dt>Date modified:</dt><dd><span><time>2012-08-01</time></span></dd>
-</dl>
-<div class="clear"></div>
 <!-- MainContentEnd -->
 </div></div>
+
+<div id="wb-sec"><div id="wb-sec-in"><nav role="navigation"><h2 id="wb-nav">Secondary menu</h2>
+<div class="wb-sec-def">
+<!-- SecNavStart -->
+<section><h3><a href="#">Base</a></h3>
+<ul>
+<li><a href="">Grid System</a></li>
+<li><a href="grid-color-eng.html">Colour</a></li>
+<li><a href="grid-button-bouton-eng.html">Buttons</a></li>
+<li><a href="grid-proximit-eng.html">Proximity</a></li>
+<li><a href="#">Table</a></li>
+<li><a href="grid-form-eng.html">Form</a></li>
+</ul>
+</section>
+<section><h3><a href="#">Modules</a></h3>
+<ul>
+<li><a href="#">Messages</a></li>
+<li><a href="#">Item 2.2b</a></li>
+<li><a href="#">Item 2.2c</a></li>
+</ul>
+</section>
+<section><h3><a href="section2/section23/index-eng.html">Section 2.3</a></h3>
+<ul>
+<li><a href="#">Item 2.3a</a></li>
+<li><a href="#">Item 2.3b</a></li>
+<li><a href="#">Item 2.3c</a></li>
+</ul>
+</section>
+<section><h3><a href="#">Section 2.4</a></h3>
+<ul>
+<li><a href="#">Item 2.4c</a></li>
+</ul>
+</section>
+<div class="top-level"><a href="#">Top level link 1</a></div>
+<div class="top-level"><a href="#">Top level link 2</a></div>
+<!-- SecNavEnd -->
+</div>
+</nav></div></div>
 </div></div>
 
-<div id="wb-foot"><div id="wb-foot-in"><footer><h2 id="wb-nav">Footer</h2>
+<div id="wb-foot"><div id="wb-foot-in"><footer><h2>Footer</h2>
 <!-- FooterStart -->
 <nav role="navigation"><div id="gcwu-sft"><h3>Site footer</h3><div id="gcwu-sft-in">
 <div id="gcwu-tctr">
 <ul>
-<li class="gcwu-tc"><a href="#" rel="license">Terms and conditions</a></li>
-<li class="gcwu-tr"><a href="#">Transparency</a></li>
+<li class="gcwu-tc"><a href="#" target="_blank" rel="license">Terms and conditions</a></li>
+<li class="gcwu-tr"><a href="#" target="_blank">Transparency</a></li>
 </ul>
 </div>
 <div class="clear"></div>
-<section><div class="span-2"><h4 class="gcwu-col-head"><a href="#">About us</a></h4>
-<ul>
-<li><a href="#">Our Mandate</a></li>
-<li><a href="#">Our Minister</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="gcwu-col-head"><a href="#">News</a></h4>
-<ul>
-<li><a href="#">News releases</a></li>
-<li><a href="#">Media advisories</a></li>
-<li><a href="#">Multimedia</a></li>
-</ul>
-</div></section>
-<section><div class="span-2"><h4 class="gcwu-col-head"><a href="#">Contact us</a></h4>
-<address>
-<ul>
-<li><a href="#">Phone numbers</a></li>
-<li><a href="#">Office locations</a></li>
-</ul>
-</address>
-</div></section>
-<section><div class="span-2"><h4 class="gcwu-col-head"><a href="#">Stay connected</a></h4>
-<ul>
-<li><a rel="external" href="#">YouTube</a></li>
-<li><a rel="external" href="#">Twitter</a></li>
-<li><a href="#">Feeds</a></li>
-</ul>
-</div></section>
+<div class="span-2"><div class="gcwu-col-head"><a href="#" target="_blank">About us</a></div></div>
+<div class="span-2"><div class="gcwu-col-head"><a href="#" target="_blank">News</a></div></div>
+<div class="span-2"><div class="gcwu-col-head"><a href="#" target="_blank">Contact us</a></div></div>
+<div class="span-2"><div class="gcwu-col-head"><a href="#" target="_blank">Stay connected</a></div></div>
 </div></div></nav>
 
 <nav role="navigation"><div id="gcwu-gcft"><h3>Government of Canada footer</h3><div id="gcwu-gcft-in"><div id="gcwu-gcft-fip">
 <ul>
-<li><a rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span><br />healthycanadians.gc.ca</a></li>
-<li><a rel="external" href="http://www.voyage.gc.ca/index-eng.asp"><span>Travel</span><br />travel.gc.ca</a></li>
-<li><a rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span><br />servicecanada.gc.ca</a></li>
-<li><a rel="external" href="http://www.jobbank.gc.ca/intro-eng.aspx"><span>Jobs</span><br />jobbank.gc.ca</a></li>
-<li><a rel="external" href="http://actionplan.gc.ca/eng/index.asp"><span>Economy</span><br />actionplan.gc.ca</a></li>
-<li id="gcwu-gcft-ca"><div><a rel="external" href="http://www.canada.gc.ca/menu-eng.html">Canada.gc.ca</a></div></li>
+<li><a target="_blank" rel="external" href="http://healthycanadians.gc.ca/index-eng.php"><span>Health</span><br />healthycanadians.gc.ca</a></li>
+<li><a target="_blank" rel="external" href="http://www.voyage.gc.ca/index-eng.asp"><span>Travel</span><br />travel.gc.ca</a></li>
+<li><a target="_blank" rel="external" href="http://www.servicecanada.gc.ca/eng/home.shtml"><span>Service Canada</span><br />servicecanada.gc.ca</a></li>
+<li><a target="_blank" rel="external" href="http://www.jobbank.gc.ca/intro-eng.aspx"><span>Jobs</span><br />jobbank.gc.ca</a></li>
+<li><a target="_blank" rel="external" href="http://actionplan.gc.ca/eng/index.asp"><span>Economy</span><br />actionplan.gc.ca</a></li>
+<li id="gcwu-gcft-ca"><div><a target="_blank" rel="external" href="http://www.canada.gc.ca/menu-eng.html">Canada.gc.ca</a></div></li>
 </ul>
 </div></div></div></nav>
 <!-- FooterEnd -->

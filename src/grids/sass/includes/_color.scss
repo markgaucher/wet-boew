@@ -26,12 +26,6 @@
 	p[class*="background-"] { padding: 3px 8px; }
 	span[class*="background-"] { padding: 1px 4px; }
 	
-	[class*="background-"] { 
-		#{headings(2,6)}, p {
-			margin: $margin-medium !important;
-		}
-	}
-	
 	.background-highlight { @include colorize-base($highlight, true); }
 	.background-accent { @include colorize-base($accent, true); }
 	.background-white { @include colorize-base($white, true); }

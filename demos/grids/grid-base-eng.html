@@ -1183,6 +1183,199 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 
 
 
+<h2 id="parents">Grid parents and children <abbr title="Cascading Style Sheet">CSS</abbr></h2>
+<div class="span-2 module float-right">
+	<p><strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong></p>
+	<ul>
+	<li><code>row-start</code></li>
+	<li><code>row-end</code></li>
+	<li><code>equalize</code></li>
+	</ul>
+</div>
+<p>Within a grid cell, you can place other grids, thereby creating a <strong>grid parent</strong> that contains <strong>grid children</strong> (like a table inside a table). Grids are typically rows of content, read from left to right. However, there are times when you need to cluster and group content in a customized way. Grid parents allow you to do this.</p>
+<p>Placing grids inside grids allows you to stack content and create unique layouts, while adhering to the structure and rigour of a grid system. Additionally, JAWS (software for visually impaired staff) can read grouped content within the grid parent before moving to the next grid cell, even when you vertically stack this content. This ensures both visual and visually-impaired users have the same experience.</p>
+<h3><code>row-start</code> and <code>row-end</code> <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<p>In each row, you need to remove the left hand gutter from the first child and the right hand gutter from the last grid child so it fits into the available space (the <code>margin-right</code> is either 5px or 10px, depending on the user's resolution). Apply the <code>row-start</code> to the first child in the row and then <code>row-end</code> <abbr title="Cascading Style Sheet">CSS</abbr> to the last child in a given row to achieve this. Refer to the example below.</p>
+<div class="clear"></div>
+
+<h4>Example 1: Parent / Child Grids</h4>
+<p>You can horizontally align smaller children within a parent cell.</p>
+<h5>Correct use of <code>row-end</code>&hellip;</h5>
+<p>The <code>row-start</code> sets the <code>margin-left</code> to zero and the <code>row-end</code> class sets the <code>margin-right</code> to zero to ensure a pixel-perfect fit.</p>
+
+<div class="span-4 align-center background-light">
+	<h3 class="margin-bottom-medium border-none">(Parent)</h3>
+	<div class="span-1 row-start background-dark">
+		<p>row-start</p>
+	</div>
+	<div class="span-2 background-accent">
+		<p>span-1</p>
+	</div>
+	<div class="span-1 row-end background-dark">
+		<p>row-end</p>
+	</div>
+</div>
+<div class="clear"></div>
+
+<h4>Source Code</h4>
+<p><code>span-3</code> with <code>row-end</code> and <code>row-end</code></p>
+<pre class="span-5"><code>&lt;div class=&quot;span-3&quot;&gt;
+&lt;h3 class=&quot;background-dark&quot;&gt;Example&lt;/h3&gt;
+&lt;div class=&quot;span-1 row-start&quot;&gt;
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1&quot;&gt;
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1 row-end&quot;&gt;
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;span-1 row-start&quot;&gt;
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1&quot;&gt;
+	&lt;img src=&quot;a5.jpg&quot; alt=&quot;___&quot; width=&quot;102&quot; height=&quot;77&quot; /&gt;
+
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1 row-end&quot;&gt;
+	&lt;img src=&quot;a6.jpg&quot; alt=&quot;___&quot; width=&quot;102&quot; height=&quot;77&quot; /&gt;
+
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="clear"></div>
+<h5>If you forget to use the <code>row-start</code> and <code>row-end</code> class&hellip;</h5>
+<p>If you allow the first and last child per row to retain their margins, they can't fit into the available space. Therefore, the final cells gets bumped and floats to the next available space below.</p>
+<div class="span-4 align-center background-light">
+	<h3 class="margin-bottom-medium border-none">(Parent)</h3>
+	<div class="span-1 background-accent">
+		<p>span-1</p>
+	</div>
+	<div class="span-2 background-accent">
+		<p>span-2</p>
+	</div>
+	<div class="span-1 background-accent">
+		<p>span-1</p>
+	</div>
+</div>
+<div class="clear"></div>
+<h4 id="ex2Par">Example 2: Parent &#47; Child grids</h4>
+<p>You can have children with the <strong class="color-accent">same width</strong> as the parent cell. If a child cell is as wide as the parent cell, then you do <strong>not</strong> need to apply the <code>row-start</code> and <code>row-end</code> classes, as the <abbr title="Cascading Style Sheet">CSS</abbr> automatically removes the margin left and right from the child.</p>
+<div class="span-1"></div>
+<div class="span-2">
+	<h2 class="background-accent">Example (<code>span-2</code>)</h2>
+	<div class="span-2 background-light margin-bottom-small">
+	<p>Text here</p>
+	</div>
+	<div class="span-2 background-dark margin-bottom-small">
+	<p>Text and <a href="#ex2Par">fake link</a></p>
+	</div>
+</div>
+<div class="clear"></div>
+<p class="color-attention">Source code:</p>
+<pre class="span-5"><code>&lt;div class=&quot;span-2&quot;&gt; 
+&lt;h2 class=&quot;background-accent&quot;&gt;Example&lt;/h2&gt;
+
+&lt;div class=&quot;span-2 background-light margin-bottom-small&quot;&gt;
+	&lt;p&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-2 background-dark margin-bottom-small&quot;&gt;
+	&lt;p&gt;Text and &lt;a href=&quot;#&quot;&gt;fake link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<div class="clear"></div>
+
+
+
+
+
+<h2 id="equalheights">Equal height columns</h2>
+<p>Historically, you used tables for layout, and it was easy to create columns of equal height. In every row, the table data cells always assumed the height of the tallest cell in that row. <abbr title="Cascading Style Sheet">CSS</abbr> grid cells create similar rows of content, but because they are not associated with each other, they do not apply borders and background colour fills in the same way. Without JavaScript, there is no way for the browser to know what the tallest grid cell per row cell is. Therefore, a <abbr title="Cascading Style Sheet">CSS</abbr> &#47; JavaScript solution is necessary to achieve this same effect.</p>
+<div class="span-2 float-right margin-bottom-medium"><img src="images/equalHeights.gif" alt="Equal height diagram" width="224" height="62" /></div>
+<p>By using <code>equalize</code> on the grid parent, its row of grid children automatically assume the height of the tallest child.</p>
+<h3>Default &mdash; No parent &#47; child relationship, and no <code>equalize</code> <abbr title="Cascading Style Sheet">CSS</abbr></h3>
+<div class="span-1"></div>
+<div class="span-3 background-light">
+	<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</p>
+</div>
+<div class="span-2">
+	<p>This is placeholder text.</p>
+</div>
+<div class="clear"></div>
+<div class="span-1"></div>
+<div class="span-1">
+	<p>This is placeholder text.</p>
+</div>
+<div class="span-2 background-dark">
+	<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</p>
+</div>
+<div class="span-2 background-light">
+	<p>This is placeholder text.</p>
+</div>
+<div class="clear"></div>
+<h3>Optional &mdash; Parent &#47; child relationship using <code>equalize</code></h3>
+<div class="span-6 equalize">
+	<div class="span-1 row-start"></div>
+	<div class="span-3 background-light">
+	<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</p>
+	</div>
+	<div class="span-2 row-end">
+	<p>This is placeholder text.</p>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="span-6 equalize">
+	<div class="span-1 row-start"></div>
+	<div class="span-1">
+	<p>This is placeholder text.</p>
+	</div>
+	<div class="span-2 background-dark">
+	<p>This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text. This is placeholder text.</p>
+	</div>
+	<div class="span-2 background-light row-end">
+	<p>This is placeholder text.</p>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="span-1"></div>
+<div class="span-5">
+	<p class="color-attention margin-top-large">Source code: <code>span-6</code> rows with <code>margin-bottom-none</code> and <code>equalize</code></p>
+	<pre><code>&lt;div class=&quot;span-6 equalize&quot;&gt;
+&lt;div class=&quot;span-1 row-start&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;span-3 background-light&quot;&gt;
+	&lt;p&gt;This is placeholder text.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;span-2 row-end&quot;&gt;
+	&lt;p&gt;This is placeholder text.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;span-6 equalize&quot;&gt;
+&lt;div class=&quot;span-1 row-start&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;span-1&quot;&gt;
+	&lt;p&gt;This is placeholder text.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;span-2 background-dark&quot;&gt;
+	&lt;p&gt;This is placeholder text.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-2 background-light row-end&quot;&gt;
+
+	&lt;p&gt;This is placeholder text.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;</code></pre>
+		</div>
+<div class="clear"></div>
+
+
+
 
 <dl id="gcwu-date-mod" role="contentinfo">
 <dt>Date modified:</dt><dd><span><time>2012-08-01</time></span></dd>

@@ -69,6 +69,10 @@
 
 	ul.menu-horizontal {
 		@include horizontal-list(2px);
+		
+		li {
+			line-height: 2;
+		}
 	}
 	
 /*ul,dl,ol{margin:0 10px 10px 40px;padding:0;}

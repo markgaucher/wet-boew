@@ -8,7 +8,7 @@
 <meta charset="utf-8" />
 <!-- Web Experience Toolkit (WET) / Boîte à outils de l'expérience Web (BOEW)
 www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
-<title>Application Template - Secondary menu 1 - GC Web Usability theme - Working examples - Web Experience Toolkit (WET)</title>
+<title>Grids and grid utilities - Working examples - Web Experience Toolkit (WET)</title>
 
 <link rel="shortcut icon" href="../../build/theme-gcwu-fegc/images/favicon.ico" />
 <meta name="description" content="English description / Description en anglais" />
@@ -56,7 +56,7 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <!-- CustomScriptsCSSEnd -->
 </head>
 
-<body class="wet-boew-prettify all-pre linenums"><div id="wb-body-sec">
+<body class="wet-boew-prettify"><div id="wb-body-sec">
 <div id="wb-skip">
 <ul id="wb-tphp">
 <li id="wb-skip1"><a href="#wb-cont">Skip to main content</a></li>
@@ -117,138 +117,93 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <div id="wb-main" role="main"><div id="wb-main-in">
 <!-- MainContentStart -->
 
-
-<h1>Colour</h1>
-<h2>Background Colour</h2>
-<div class="span-2 module float-right">
-	<p><strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong></p>
-	<ul>
-	<li><code>background-white</code></li>
-	<li><code>background-light</code></li>
-	<li><code>background-medium</code></li>
-	<li><code>background-dark</code></li>
-	<li><code>background-accent</code></li>
-	<li><code>background-highlight</code></li>
-	</ul>
+<h1>Images</h1>
+<div class="span-2 float-right">
+	<div class="span-2 module-note module-simplify margin-bottom-small">
+		<p><strong>Classes</strong></p>
+		<ul>
+			<li><code>image-actual</code></li>
+		</ul>
+	</div>
+	<div class="span-2 margin-top-small module-info module-simplify">
+		<p><strong>Related Classes</strong></p>
+		<ul>
+			<li><a href="grid-module-eng.html">module-poster</a></li>
+		</ul>
+	</div>
 </div>
-<p>Use background colours to highlight content and &#47; or create information blocks that focus the user's attention. You can apply these background colours to a grid cell or to an HTML element for example, a heading. Do not overuse background colours, or they become less effective.</p>
-<table class="span-6 table-simplify">
-	<caption>Table background colours</caption>
-	<thead>
-		<tr>
-			<th scope="col">Class</th>
-			<th scope="col">Heading</th>
-			<th scope="col">Paragraph</th>
-			<th scope="col">Span</th>
-			<th scope="col">Div</th>
-		</tr>
-	</thead>
-	<tr>
-		<td><code>background-white</code></td>
-		<td><h3 class="background-white">Lorem ipsum</h3></td>
-		<td><p class="background-white margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-white">Lorem ipsum</span></td>
-		<td><div class="background-white">Lorem ipsum</div></td>
-	</tr>
-	<tr>
-		<td><code>background-light</code></td>
-		<td><h3 class="background-light">Lorem ipsum</h3></td>
-		<td><p class="background-light margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-light">Lorem ipsum</span></td>
-		<td><div class="background-light">Lorem ipsum</div></td>
-	</tr>
-	<tr>
-		<td><code>background-medium</code></td>
-		<td><h3 class="background-medium">Lorem ipsum</h3></td>
-		<td><p class="background-medium margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-medium">Lorem ipsum</span></td>
-		<td><div class="background-medium">Lorem ipsum</div></td>
-	</tr>
-	<tr>
-		<td><code>background-dark</code></td>
-		<td><h3 class="background-dark">Lorem ipsum</h3></td>
-		<td><p class="background-dark margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-dark">Lorem ipsum</span></td>
-		<td><div class="background-dark">Lorem ipsum</div></td>
-	</tr>
-	<tr>
-		<td><code>background-accent</code></td>
-		<td><h3 class="background-accent">Lorem ipsum</h3></td>
-		<td><p class="background-accent margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-accent">Lorem ipsum</span></td>
-		<td><div class="background-accent">Lorem ipsum</div></td>
-	</tr>
-	<tr>
-		<td><code>background-highlight</code></td>
-		<td><h3 class="background-highlight">Lorem ipsum</h3></td>
-		<td><p class="background-highlight margin-top-none margin-bottom-none">Lorem ipsum</p></td>
-		<td><span class="background-highlight">Lorem ipsum</span></td>
-		<td><div class="background-highlight">Lorem ipsum</div></td>
-	</tr>
-</table>
-<div class="clear"></div>
+<p>An image is a static two dimensional visual artifact that is a type of non-text content classified as decorative, simple, complex, or an image of text.</p>
+<p>In order to accommodate multiple resolutions, grids automatically resize themselves. Text automatically word-wraps, but images are typically a fixed size. This can cause problems within a responsive grid system. To avoid such problems, images within a grid cell expand to fill 100% of the particular grid's width.</p>
+<p>To override this feature, you may use the <code>image-actual</code> class.</p>
+
+<h2>Examples</h2>
+<h3>Flexible Images</h3>
+<p>The examples provided use the same source file, which is a 224 pixels wide. The smallest <code>span-1</code> version pinches the image at the corners; the largest <code>span-3</code> version stretches, and blurs it. Therefore, the best grid to view the below sunflower image is within in a <code>span-2</code> at 1024x768 resolution, as it is a perfect fit (optimal size for its placement).</p>
+<p>Although any image may be fit in any grid cell, it's best to size your image to fit the largest intended cell. For example, the <code>span-2</code> cell ranges from 194 pixels to 224 pixels wide, depending on the user's screen resolution. To reduce visual distortion, size the image to match the grid cell's largest width &mdash; in this case 224 pixels.</p>
+
+<details class="span-6 view-example">
+	<summary>View Example</summary>	
+	<div class="span-1 row-start"><img src="images/a7.jpg" alt="Example of fluid sunflower image, grid 1" width="224" height="168" /></div>
+	<div class="span-2"><img src="images/a7.jpg" alt="Example of fluid sunflower image, grid 2" width="224" height="168" /></div>
+	<div class="span-3 row-end"><img src="images/a7.jpg" alt="Example of fluid sunflower image, grid 3" width="224" height="168" /></div>
+	<div class="clear"></div>
+</details>
 
 <details class="span-6 view-code">
-	<summary>View Code</summary>
-<p><pre>&lt;div class=&quot;span-3 background-dark&quot;&gt;
-   &lt;p&gt;Background dark&lt;/p&gt;
-&lt;/div&gt;</pre></p>
+	<summary>Source Code</summary>
+	<pre class="prettyprint linenums">&lt;div class=&quot;span-1&quot;&gt;
+   &lt;img src=&quot;images/a7.jpg&quot; alt=&quot;&quot; width=&quot;224&quot; height=&quot;168&quot; /&gt;
+&lt;/div&gt;</pre>
 </details>
 <div class="clear"></div>
 
-<!--	
+<h3>Fixed Width Images</h3>
+<p>If you <strong>do not</strong> want an image to stretch to 100% of the cell width, apply the <code>image-actual</code> class to the image. For example, if you view the 20x20 pixel check-mark image at 100% of a grid cell, it appears pixilated. The <code>image-actual</code> class ensures the image retains its width and height properties, and never visually distorts.</p>
+
+<details class="span-6 view-example">
+	<summary>View Example - Flexible Image Size</summary>
+	<div class="span-1 row-start"><img src="images/tick.gif" alt="Example of large distorted check mark" width="20" height="20" /></div>
+	<div class="span-1"><img src="images/x.gif" alt="Example of large distorted X" width="20" height="20" /></div>	
+</details>
+
+<details class="span-6 view-code">
+	<summary>Source Code - Flexible Image Size</summary>
+	<pre class="prettyprint linenums">&lt;div class=&quot;span-1&quot;&gt;
+   &lt;img src=&quot;tick.gif&quot; alt=&quot;___&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1&quot;&gt;      
+   &lt;img src=&quot;x.gif&quot; alt=&quot;___&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;
+&lt;/div&gt;</pre>
+</details>
+
+<details class="span-6 view-example">
+	<summary>View Example - Fixed Image Size</summary>
+	<div class="span-1"><img class="image-actual" src="images/tick.gif" alt="Example of large distorted check mark" width="20" height="20" /></div>
+<div class="span-1"><img class="image-actual" src="images/x.gif" alt="Example of large distorted X" width="20" height="20" /></div>
+</details>
+
+<details class="span-6 view-code">
+	<summary>Source Code - Fixed Image Size</summary>
+	<pre class="prettyprint linenums">&lt;div class=&quot;span-1&quot;&gt;
+   &lt;img class=&quot;image-actual&quot; src=&quot;tick.gif&quot; alt=&quot;___&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;span-1&quot;&gt;   
+   &lt;img class=&quot;image-actual&quot; src=&quot;x.gif&quot; alt=&quot;___&quot; width=&quot;20&quot; height=&quot;20&quot; /&gt;
+&lt;/div&gt;</pre>
+</details>
+<div class="clear"></div>
+
+<!--
 <div class="span-6 module-summary">
-	<h3>Recap: Background fill options</h3>
+	<h3>Recap: Images and grids</h3>
 	<ul>
-	<li>Use background colours to highlight content and &#47; or create information blocks to focus the user's attention.</li>
+	<li>Images within a grid automatically stretch to fill the width of that grid cell.</li>
+	<li>If you do not want an image to stretch to 100% of the cell width, apply the <code>image-actual</code> class to the image.</li>
+	<li>When you optimize your image, size it to fit the grid cell width you are most likely going to place it in. Size the image to match the larger grid cell 1024x768 width. Refer to <a href="#buildingblocks">Grid building blocks</a> for sizing details.</li>
 	</ul>
 </div>
 <div class="clear"></div>
 -->
-
-<h3 id="fc">Font Colour</h3>
-<div class="span-2 module float-right">
-	<p><strong>Introducing <abbr title="Cascading Style Sheet">CSS</abbr> classes:</strong></p>
-	<ul>
-	<li><code>text-medium</code></li>
-	<li><code>text-dark</code></li>
-	<li><code>text-accent</code></li>
-	<li><code>text-attention</code></li>
-	</ul>
-</div>
-
-<table class="table-simplify span-8">
-	<caption>
-	The different font colour styling options
-	</caption>
-	<thead>
-		<tr>
-		<th scope="col">Class</th>
-		<th scope="col">Details</th>
-		<th scope="col">Example</th>
-		</tr>
-	</thead>
-	<tr>
-	<td><code>color-medium</code></td>
-	<td>A muted dark tone used for accent text.</td>
-	<td class="color-medium">Resulting text colour</td>
-	</tr>
-	<tr>
-	<td><code>color-dark</code></td>
-	<td>The default text colour.</td>
-	<td class="color-dark">Resulting text colour</td>
-	</tr>
-	<tr>
-	<td><code>color-accent</code></td>
-	<td>Match the font colour to colour theme.</td>
-	<td class="color-accent">Resulting text colour</td>
-	</tr>
-	<tr>
-	<td><code>color-attention</code></td>
-	<td>Draw attention to something extra important.</td>
-	<td class="color-attention">Resulting text colour</td>
-	</tr>
-</table>
 
 <!-- MainContentEnd -->
 </div></div>
@@ -256,16 +211,19 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 <div id="wb-sec"><div id="wb-sec-in"><nav role="navigation"><h2 id="wb-nav">Secondary menu</h2>
 <div class="wb-sec-def">
 <!-- SecNavStart -->
-<section><h3><a href="#">Section 2.1</a></h3>
+<section><h3><a href="#">Base</a></h3>
 <ul>
-<li><a href="#">Item 2.1a</a></li>
-<li><a href="#">Item 2.1b</a></li>
-<li><a href="#">Item 2.1c</a></li>
+<li><a href="">Grid System</a></li>
+<li><a href="grid-color-eng.html">Colour</a></li>
+<li><a href="grid-button-bouton-eng.html">Buttons</a></li>
+<li><a href="grid-proximit-eng.html">Proximity</a></li>
+<li><a href="#">Table</a></li>
+<li><a href="grid-form-eng.html">Form</a></li>
 </ul>
 </section>
-<section><h3><a href="#">Section 2.2</a></h3>
+<section><h3><a href="#">Modules</a></h3>
 <ul>
-<li><a href="#">Item 2.2a</a></li>
+<li><a href="#">Messages</a></li>
 <li><a href="#">Item 2.2b</a></li>
 <li><a href="#">Item 2.2c</a></li>
 </ul>
@@ -279,14 +237,6 @@ www.tbs.gc.ca/ws-nw/wet-boew/terms / www.sct.gc.ca/ws-nw/wet-boew/conditions -->
 </section>
 <section><h3><a href="#">Section 2.4</a></h3>
 <ul>
-<li><a href="#">Item 2.4a</a></li>
-<li><a href="#">Item 2.4b</a>
-	<ul>
-	<li><a href="#">Item 2.4bi</a></li>
-	<li><a href="#">Item 2.4bii</a></li>
-	<li><a href="#">Item 2.4biii</a></li>
-	</ul>
-</li>
 <li><a href="#">Item 2.4c</a></li>
 </ul>
 </section>
