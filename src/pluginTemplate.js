@@ -7,6 +7,7 @@
  */
 /*global jQuery: false, pe: false, wet_boew_pluginName: false*/
 (function ($) {
+	"use strict";
 	var _pe = window.pe || {
 		fn: {}
 	};
@@ -15,6 +16,8 @@
 		type: 'plugin',
 		// This is an example from tabbed interface, to show how to call required libraries when they are needed
 		depends: (pe.mobile ? [] : ['metadata', 'easytabs', 'equalheights']),
+		//Specifies polyfill needed by the plugin (for elements created at runtime)
+		polyfills:['progress','detailssummary'],
 		// Don't include a mobile function if your plugin shouldn't run in mobile mode.
 		mobile: function (elm) {
 			// If applicaple, convert html elements and attributes into the format that jQuery mobile expects.
@@ -68,6 +71,9 @@
 			}
 
 			// Do plugin stuff here...
+			aVariable = true;
+			anotherVariable = 5;
+			
 			return elm;
 		} // end of exec
 	};
